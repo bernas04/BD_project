@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\BD_project\\forms\\forms.vbproj": {}
+    "C:\\Users\\joaob\\Ambiente de Trabalho\\UNIVERSIDADE\\2º ano\\2º semestre\\BD\\projeto\\BD_project\\forms\\forms.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\BD_project\\forms\\forms.vbproj": {
+    "C:\\Users\\joaob\\Ambiente de Trabalho\\UNIVERSIDADE\\2º ano\\2º semestre\\BD\\projeto\\BD_project\\forms\\forms.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\BD_project\\forms\\forms.vbproj",
+        "projectUniqueName": "C:\\Users\\joaob\\Ambiente de Trabalho\\UNIVERSIDADE\\2º ano\\2º semestre\\BD\\projeto\\BD_project\\forms\\forms.vbproj",
         "projectName": "forms",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\BD_project\\forms\\forms.vbproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\BD_project\\forms\\obj\\",
+        "projectPath": "C:\\Users\\joaob\\Ambiente de Trabalho\\UNIVERSIDADE\\2º ano\\2º semestre\\BD\\projeto\\BD_project\\forms\\forms.vbproj",
+        "packagesPath": "C:\\Users\\joaob\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joaob\\Ambiente de Trabalho\\UNIVERSIDADE\\2º ano\\2º semestre\\BD\\projeto\\BD_project\\forms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\joaob\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
