@@ -9,6 +9,59 @@ Public Class Form1
 
         CMD = New SqlCommand
         CMD.Connection = CN
+        CMD.CommandText = "SELECT count(*) as total FROM proj.Funcionario"
+        CN.Open()
+        Dim RDR As SqlDataReader
+        RDR = CMD.ExecuteReader
+
+
+        While RDR.Read
+            func_txt.Text = "A empresa possui " & RDR.Item("total") & " funcionários"
+        End While
+        CN.Close()
+
+        CMD.CommandText = "SELECT count(*) as total FROM proj.Cliente"
+        CN.Open()
+        Dim RDR1 As SqlDataReader
+        RDR1 = CMD.ExecuteReader
+        While RDR1.Read
+            clientes_txt.Text = "A empresa possui " & RDR1.Item("total") & " clientes"
+        End While
+        CN.Close()
+
+
+        CN.Open()
+        CMD.CommandText = "SELECT count(*) as total FROM proj.Fornecedor"
+
+        RDR1 = CMD.ExecuteReader
+        While RDR1.Read
+            forn_txt.Text = "A empresa possui " & RDR1.Item("total") & " fornecedores"
+        End While
+        CN.Close()
+
+        CN.Open()
+        CMD.CommandText = "SELECT count(*) as total FROM proj.Secçao"
+
+        RDR1 = CMD.ExecuteReader
+        While RDR1.Read
+            seccao_txt.Text = "A empresa possui " & RDR1.Item("total") & " secções"
+        End While
+        CN.Close()
+
+        CN.Open()
+        CMD.CommandText = "SELECT count(*) as total FROM proj.Evento"
+
+        RDR1 = CMD.ExecuteReader
+        While RDR1.Read
+            eventos_txt.Text = "A empresa já organizou  " & RDR1.Item("total") & " eventos"
+        End While
+        CN.Close()
+
+
+
+
+
+
 
     End Sub
 

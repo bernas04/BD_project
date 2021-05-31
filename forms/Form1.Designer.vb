@@ -42,6 +42,11 @@ Partial Class Form1
         Me.PictureBox_Eventos = New System.Windows.Forms.PictureBox()
         Me.PictureBox_Pessoal = New System.Windows.Forms.PictureBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.seccao_txt = New System.Windows.Forms.Label()
+        Me.clientes_txt = New System.Windows.Forms.Label()
+        Me.forn_txt = New System.Windows.Forms.Label()
+        Me.eventos_txt = New System.Windows.Forms.Label()
+        Me.func_txt = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -54,6 +59,7 @@ Partial Class Form1
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -279,6 +285,12 @@ Partial Class Form1
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Label1)
+        Me.GroupBox3.Controls.Add(Me.seccao_txt)
+        Me.GroupBox3.Controls.Add(Me.clientes_txt)
+        Me.GroupBox3.Controls.Add(Me.forn_txt)
+        Me.GroupBox3.Controls.Add(Me.eventos_txt)
+        Me.GroupBox3.Controls.Add(Me.func_txt)
         Me.GroupBox3.Controls.Add(Me.Label14)
         Me.GroupBox3.Controls.Add(Me.PictureBox14)
         Me.GroupBox3.Controls.Add(Me.Label12)
@@ -298,6 +310,47 @@ Partial Class Form1
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Estatísticas"
+        '
+        'seccao_txt
+        '
+        Me.seccao_txt.AutoSize = True
+        Me.seccao_txt.Location = New System.Drawing.Point(781, 166)
+        Me.seccao_txt.Name = "seccao_txt"
+        Me.seccao_txt.Size = New System.Drawing.Size(0, 19)
+        Me.seccao_txt.TabIndex = 25
+        '
+        'clientes_txt
+        '
+        Me.clientes_txt.AutoSize = True
+        Me.clientes_txt.Location = New System.Drawing.Point(326, 166)
+        Me.clientes_txt.Name = "clientes_txt"
+        Me.clientes_txt.Size = New System.Drawing.Size(0, 19)
+        Me.clientes_txt.TabIndex = 24
+        '
+        'forn_txt
+        '
+        Me.forn_txt.AutoSize = True
+        Me.forn_txt.Location = New System.Drawing.Point(975, 59)
+        Me.forn_txt.Name = "forn_txt"
+        Me.forn_txt.Size = New System.Drawing.Size(0, 19)
+        Me.forn_txt.TabIndex = 23
+        Me.forn_txt.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'eventos_txt
+        '
+        Me.eventos_txt.AutoSize = True
+        Me.eventos_txt.Location = New System.Drawing.Point(560, 59)
+        Me.eventos_txt.Name = "eventos_txt"
+        Me.eventos_txt.Size = New System.Drawing.Size(0, 19)
+        Me.eventos_txt.TabIndex = 22
+        '
+        'func_txt
+        '
+        Me.func_txt.AutoSize = True
+        Me.func_txt.Location = New System.Drawing.Point(167, 59)
+        Me.func_txt.Name = "func_txt"
+        Me.func_txt.Size = New System.Drawing.Size(0, 19)
+        Me.func_txt.TabIndex = 21
         '
         'Label14
         '
@@ -412,6 +465,14 @@ Partial Class Form1
         Me.PictureBox13.TabIndex = 19
         Me.PictureBox13.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(262, 111)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(0, 19)
+        Me.Label1.TabIndex = 26
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -478,4 +539,10 @@ Partial Class Form1
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents func_txt As Label
+    Friend WithEvents seccao_txt As Label
+    Friend WithEvents clientes_txt As Label
+    Friend WithEvents forn_txt As Label
+    Friend WithEvents eventos_txt As Label
+    Friend WithEvents Label1 As Label
 End Class
