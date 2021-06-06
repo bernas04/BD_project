@@ -83,3 +83,39 @@ C:\Users\joaob\Ambiente de Trabalho\UNIVERSIDADE\2º ano\2º semestre\BD\projeto
 C:\Users\joaob\Ambiente de Trabalho\UNIVERSIDADE\2º ano\2º semestre\BD\projeto\BD_project\forms\obj\Debug\net5.0-windows\ref\forms.dll
 C:\Users\joaob\Ambiente de Trabalho\UNIVERSIDADE\2º ano\2º semestre\BD\projeto\BD_project\forms\obj\Debug\net5.0-windows\forms.pdb
 C:\Users\joaob\Ambiente de Trabalho\UNIVERSIDADE\2º ano\2º semestre\BD\projeto\BD_project\forms\obj\Debug\net5.0-windows\forms.genruntimeconfig.cache
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\forms.exe
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\forms.deps.json
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\forms.runtimeconfig.json
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\forms.runtimeconfig.dev.json
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\forms.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\ref\forms.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\forms.pdb
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.vbprojAssemblyReference.cache
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Compras.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Encomendas.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Eventos.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Form1.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Fornecedor.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.GestaoPes.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Resources.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Produto.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Seccao.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.vbproj.GenerateResource.cache
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.AssemblyInfoInputs.cache
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.AssemblyInfo.vb
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.vbproj.CoreCompileInputs.cache
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.vbproj.CopyComplete
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.dll
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\ref\forms.dll
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.pdb
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.genruntimeconfig.cache
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Clientes.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Funcionarios.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.NaoClientesvb.resources

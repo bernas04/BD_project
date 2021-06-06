@@ -1,9 +1,5 @@
-﻿Imports System.IO
-Imports System.Runtime.Serialization.Formatters.Binary
-Imports System.Data.SqlClient
-
-Public Class Fornecedor
-
+﻿Imports System.Data.SqlClient
+Public Class NaoClientesvb
     Dim CN As SqlConnection
     Dim CMD As SqlCommand
     Dim currentContact As Integer
@@ -16,16 +12,16 @@ Public Class Fornecedor
 
         CMD = New SqlCommand
         CMD.Connection = CN
-        CMD.CommandText = "SELECT * FROM proj.Fornecedor"
+        CMD.CommandText = "SELECT * FROM proj.N_cliente"
         CN.Open()
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
         ListBox1.Items.Clear()
         While RDR.Read
-            Dim C As New FornecedorC
-            C.Nif = RDR.Item("Nif")
-            C.Name = RDR.Item("Nome")
-            C.Morada = RDR.Item("Morada")
+            Dim C As New NaoClientesC
+            C.Nif = RDR.Item("pessoa_NIF")
+            C.Name = RDR.Item("nome")
+            C.Morada = RDR.Item("morada")
             ListBox1.Items.Add(C)
         End While
         CN.Close()
@@ -37,8 +33,8 @@ Public Class Fornecedor
 
     Sub ShowFornecedor()
         If ListBox1.Items.Count = 0 Or currentContact < 0 Then Exit Sub
-        Dim contact As New FornecedorC
-        contact = CType(ListBox1.Items.Item(currentContact), FornecedorC)
+        Dim contact As New NaoClientesC
+        contact = CType(ListBox1.Items.Item(currentContact), NaoClientesC)
         txtMorada.Text = contact.Morada
         txtName.Text = contact.Name
         txtNif.Text = contact.Nif
@@ -72,7 +68,7 @@ Public Class Fornecedor
     Private Sub bttnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delbtn.Click
         If ListBox1.SelectedIndex > -1 Then
             Try
-                RemoveContact(CType(ListBox1.SelectedItem, FornecedorC).Nif)
+                RemoveContact(CType(ListBox1.SelectedItem, NaoClientesC).Nif)
             Catch ex As Exception
                 MsgBox(ex.Message)
                 Exit Sub
@@ -111,7 +107,7 @@ Public Class Fornecedor
     End Sub
 
     Private Function SaveFornecedor() As Boolean
-        Dim contact As New FornecedorC
+        Dim contact As New NaoClientesC
         Try
             contact.Name = txtName.Text
             contact.Nif = txtNif.Text
@@ -121,7 +117,7 @@ Public Class Fornecedor
             Return False
         End Try
         If adding Then
-            submitcontact(contact)
+            SubmitContact(contact)
             ListBox1.Items.Add(contact)
         Else
             UpdateContact(contact)
@@ -137,7 +133,7 @@ Public Class Fornecedor
             Exit Sub
         End If
         adding = False
-        HideButtons()
+        HideButtonsEdit()
         ListBox1.Enabled = False
     End Sub
 
@@ -162,6 +158,12 @@ Public Class Fornecedor
         txtNif.ReadOnly = False
 
     End Sub
+    Sub LockControlsEdit()
+        txtMorada.ReadOnly = False
+        txtName.ReadOnly = True
+        txtNif.ReadOnly = True
+
+    End Sub
 
     Sub ShowButtons()
         LockControls()
@@ -178,7 +180,14 @@ Public Class Fornecedor
         txtName.Text = ""
 
     End Sub
-
+    Sub HideButtonsEdit()
+        LockControlsEdit()
+        Addbtn.Visible = False
+        delbtn.Visible = False
+        editbtn.Visible = False
+        okbtn.Visible = True
+        cancelbtn.Visible = True
+    End Sub
 
 
     Sub HideButtons()
@@ -190,8 +199,8 @@ Public Class Fornecedor
         cancelbtn.Visible = True
     End Sub
 
-    Private Sub SubmitContact(ByVal C As FornecedorC)
-        CMD.CommandText = "INSERT proj.Fornecedor (NIF,Morada,Nome) " &
+    Private Sub SubmitContact(ByVal C As NaoClientesC)
+        CMD.CommandText = "INSERT proj.N_cliente(pessoa_NIF  ,Morada,Nome) " &
                           "VALUES (@Nif, @Morada, @Name) "
 
         CMD.Parameters.Clear()
@@ -211,11 +220,11 @@ Public Class Fornecedor
     End Sub
 
 
-    Private Sub UpdateContact(ByVal C As FornecedorC)
-        CMD.CommandText = "UPDATE proj.Fornecedor " &
+    Private Sub UpdateContact(ByVal C As NaoClientesC)
+        CMD.CommandText = "UPDATE proj.N_cliente " &
             "SET Morada = @Morada, " &
             "    Nome = @Name " &
-            "WHERE NIF=@Nif"
+            "WHERE pessoa_NIF =@Nif"
         CMD.Parameters.Clear()
         CMD.Parameters.AddWithValue("@Nif", C.Nif)
         CMD.Parameters.AddWithValue("@Morada", C.Morada)
@@ -232,7 +241,7 @@ Public Class Fornecedor
 
 
     Private Sub RemoveContact(ByVal Nif As String)
-        CMD.CommandText = "DELETE proj.Fornecedor WHERE NIF=@Nif "
+        CMD.CommandText = "DELETE proj.N_cliente WHERE pessoa_NIF =@Nif "
         CMD.Parameters.Clear()
         CMD.Parameters.AddWithValue("@Nif", Nif)
         CN.Open()
@@ -245,7 +254,5 @@ Public Class Fornecedor
         End Try
     End Sub
 
-    Private Sub txtMorada_TextChanged(sender As Object, e As EventArgs) Handles txtMorada.TextChanged
 
-    End Sub
 End Class
