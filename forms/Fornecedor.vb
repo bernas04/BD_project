@@ -245,7 +245,7 @@ Public Class Fornecedor
         End Try
     End Sub
 
+    Private Sub txtMorada_TextChanged(sender As Object, e As EventArgs) Handles txtMorada.TextChanged
 
-
-
+    End Sub
 End Class
