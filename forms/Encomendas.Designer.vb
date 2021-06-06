@@ -50,6 +50,9 @@ Partial Class Encomendas
         Me.Label13 = New System.Windows.Forms.Label()
         Me.delbtn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.Funcionalidades.SuspendLayout()
         Me.SuspendLayout()
@@ -58,21 +61,21 @@ Partial Class Encomendas
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label12.Location = New System.Drawing.Point(563, 11)
+        Me.Label12.Location = New System.Drawing.Point(441, 11)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(47, 22)
+        Me.Label12.Size = New System.Drawing.Size(51, 22)
         Me.Label12.TabIndex = 24
-        Me.Label12.Text = "Data"
+        Me.Label12.Text = "Total"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(799, 11)
+        Me.Label7.Location = New System.Drawing.Point(702, 11)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(102, 22)
+        Me.Label7.Size = New System.Drawing.Size(109, 22)
         Me.Label7.TabIndex = 23
-        Me.Label7.Text = "Preço Total"
+        Me.Label7.Text = "Data entrega"
         '
         'ListBox1
         '
@@ -80,10 +83,10 @@ Partial Class Encomendas
         Me.ListBox1.ForeColor = System.Drawing.Color.Black
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 20
-        Me.ListBox1.Location = New System.Drawing.Point(38, 0)
+        Me.ListBox1.Location = New System.Drawing.Point(6, 0)
         Me.ListBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(582, 504)
+        Me.ListBox1.Size = New System.Drawing.Size(920, 504)
         Me.ListBox1.TabIndex = 0
         '
         'txtDataPedido
@@ -141,7 +144,7 @@ Partial Class Encomendas
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(454, 11)
+        Me.Label9.Location = New System.Drawing.Point(384, 11)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(26, 22)
         Me.Label9.TabIndex = 22
@@ -150,12 +153,12 @@ Partial Class Encomendas
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.ListBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(416, 37)
+        Me.GroupBox2.Location = New System.Drawing.Point(378, 37)
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.GroupBox2.Size = New System.Drawing.Size(485, 553)
+        Me.GroupBox2.Size = New System.Drawing.Size(950, 553)
         Me.GroupBox2.TabIndex = 21
         Me.GroupBox2.TabStop = False
         '
@@ -214,11 +217,11 @@ Partial Class Encomendas
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(690, 11)
+        Me.Label8.Location = New System.Drawing.Point(528, 11)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(88, 22)
+        Me.Label8.Size = New System.Drawing.Size(140, 22)
         Me.Label8.TabIndex = 25
-        Me.Label8.Text = "Id Cliente"
+        Me.Label8.Text = "Data encomenda"
         '
         'Label2
         '
@@ -336,11 +339,44 @@ Partial Class Encomendas
         Me.Label1.Size = New System.Drawing.Size(0, 20)
         Me.Label1.TabIndex = 18
         '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label14.Location = New System.Drawing.Point(846, 11)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(115, 22)
+        Me.Label14.TabIndex = 24
+        Me.Label14.Text = "Cod. Produto"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label15.Location = New System.Drawing.Point(1003, 11)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(131, 22)
+        Me.Label15.TabIndex = 26
+        Me.Label15.Text = "Nº Funcionario"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label16.Location = New System.Drawing.Point(1172, 11)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(132, 22)
+        Me.Label16.TabIndex = 27
+        Me.Label16.Text = "Nif Fornecedor"
+        '
         'Encomendas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1117, 600)
+        Me.ClientSize = New System.Drawing.Size(1353, 600)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label9)
@@ -388,4 +424,7 @@ Partial Class Encomendas
     Friend WithEvents Label11 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents txtId As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label16 As Label
 End Class

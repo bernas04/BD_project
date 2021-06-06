@@ -62,20 +62,7 @@
 
     Property niFornecedor() As String
         Get
-            niFornecedor = _nFunct
-        End Get
-        Set(ByVal value As String)
-            If value Is Nothing Or value = "" Then
-                Throw New Exception("Product code field can’t be empty")
-                Exit Property
-            End If
-            _nFunct = value
-        End Set
-    End Property
-
-    Property nFunct() As String
-        Get
-            nFunct = _niFornecedor
+            niFornecedor = _niFornecedor
         End Get
         Set(ByVal value As String)
             If value Is Nothing Or value = "" Then
@@ -86,8 +73,21 @@
         End Set
     End Property
 
+    Property nFunct() As String
+        Get
+            nFunct = _nFunct
+        End Get
+        Set(ByVal value As String)
+            If value Is Nothing Or value = "" Then
+                Throw New Exception("Product code field can’t be empty")
+                Exit Property
+            End If
+            _nFunct = value
+        End Set
+    End Property
+
     Overrides Function ToString() As String
-        Return _id & "       " & _conta & "                 " & _dataPedido & "                     " & _dataEntrega & "         " & _codProd & "        " & _nFunct & "         " & _niFornecedor
+        Return _id & "          " & _conta & "                  " & _dataPedido & "                         " & _dataEntrega & "                         " & _codProd & "                               " & _nFunct & "                                         " & _niFornecedor
     End Function
 
 
