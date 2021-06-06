@@ -119,3 +119,12 @@ C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.genruntimeconfig.
 C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Clientes.resources
 C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Funcionarios.resources
 C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.NaoClientesvb.resources
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\Google.Protobuf.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\MySql.Data.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\Ubiety.Dns.Core.dll
+C:\Users\Admin\BD_project\forms\bin\Debug\net5.0-windows\Zstandard.Net.dll
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.ProdutoPage.resources

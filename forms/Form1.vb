@@ -84,6 +84,7 @@ Public Class Form1
 
     Private Sub PictureBox_Fornecedor_Click(sender As Object, e As EventArgs) Handles PictureBox_Fornecedor.Click
         Fornecedor.Show()
+
     End Sub
 
     Private Sub Label_Fornecedor_Click(sender As Object, e As EventArgs) Handles Label_Fornecedor.Click
@@ -126,10 +127,6 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
-
-    End Sub
-
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
 
     End Sub
 End Class
