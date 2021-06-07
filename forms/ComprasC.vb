@@ -35,10 +35,6 @@
             Id = _Id
         End Get
         Set(ByVal value As String)
-            If value Is Nothing Or value = "" Then
-                Throw New Exception("Product code field can’t be empty")
-                Exit Property
-            End If
             _Id = value
         End Set
     End Property
@@ -54,7 +50,7 @@
                    ByVal Total As String, ByVal ClienteId As String)
         MyBase.New()
         Me.Data = Data
-        Me.Id = Id
+        'Me.Id = Id
         Me.Total = Total
         Me.ClienteId = ClienteId
 

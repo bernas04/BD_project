@@ -25,8 +25,8 @@ Partial Class Compras
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Funcionalidades = New System.Windows.Forms.GroupBox()
-        Me.txtId1 = New System.Windows.Forms.Label()
-        Me.txtId = New System.Windows.Forms.TextBox()
+        Me.txtId = New System.Windows.Forms.Label()
+        Me.txtClienteId = New System.Windows.Forms.TextBox()
         Me.txtData = New System.Windows.Forms.TextBox()
         Me.txtCodProd1 = New System.Windows.Forms.TextBox()
         Me.txtTotal = New System.Windows.Forms.TextBox()
@@ -69,8 +69,8 @@ Partial Class Compras
         '
         'Funcionalidades
         '
-        Me.Funcionalidades.Controls.Add(Me.txtId1)
         Me.Funcionalidades.Controls.Add(Me.txtId)
+        Me.Funcionalidades.Controls.Add(Me.txtClienteId)
         Me.Funcionalidades.Controls.Add(Me.txtData)
         Me.Funcionalidades.Controls.Add(Me.txtCodProd1)
         Me.Funcionalidades.Controls.Add(Me.txtTotal)
@@ -93,22 +93,22 @@ Partial Class Compras
         Me.Funcionalidades.TabIndex = 13
         Me.Funcionalidades.TabStop = False
         '
-        'txtId1
-        '
-        Me.txtId1.AutoSize = True
-        Me.txtId1.Location = New System.Drawing.Point(144, 290)
-        Me.txtId1.Name = "txtId1"
-        Me.txtId1.Size = New System.Drawing.Size(61, 20)
-        Me.txtId1.TabIndex = 22
-        Me.txtId1.Text = "Label12"
-        Me.txtId1.Visible = False
-        '
         'txtId
         '
-        Me.txtId.Location = New System.Drawing.Point(143, 220)
+        Me.txtId.AutoSize = True
+        Me.txtId.Location = New System.Drawing.Point(144, 290)
         Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(169, 27)
-        Me.txtId.TabIndex = 21
+        Me.txtId.Size = New System.Drawing.Size(61, 20)
+        Me.txtId.TabIndex = 22
+        Me.txtId.Text = "Label12"
+        Me.txtId.Visible = False
+        '
+        'txtClienteId
+        '
+        Me.txtClienteId.Location = New System.Drawing.Point(143, 220)
+        Me.txtClienteId.Name = "txtClienteId"
+        Me.txtClienteId.Size = New System.Drawing.Size(169, 27)
+        Me.txtClienteId.TabIndex = 21
         '
         'txtData
         '
@@ -343,13 +343,13 @@ Partial Class Compras
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtId As TextBox
+    Friend WithEvents txtClienteId As TextBox
     Friend WithEvents txtData As TextBox
     Friend WithEvents txtCodProd As TextBox
     Friend WithEvents txtTotal As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents txtId1 As Label
+    Friend WithEvents txtId As Label
     Friend WithEvents txtCodProd1 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label

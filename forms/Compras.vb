@@ -23,7 +23,7 @@ Public Class Compras
         ListBox1.Items.Clear()
         While RDR.Read
             Dim C As New ComprasC
-            C.ClienteId = RDR.Item("id")
+            C.ClienteId = RDR.Item("cliente_id")
             C.Data = RDR.Item("datas")
             C.Total = RDR.Item("preco")
             C.Id = RDR.Item("id")
@@ -39,7 +39,7 @@ Public Class Compras
         contact = CType(ListBox1.Items.Item(currentContact), ComprasC)
         txtData.Text = contact.Data
         txtTotal.Text = contact.Total
-        txtId.Text = contact.ClienteId
+        txtClienteId.Text = contact.ClienteId
     End Sub
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
         If ListBox1.SelectedIndex > -1 Then
@@ -58,16 +58,16 @@ Public Class Compras
 
     Sub ClearFields()
         txtData.Text = ""
-        txtId.Text = ""
+        txtClienteId.Text = ""
         txtTotal.Text = ""
-        txtId1.Text = ""
+        txtId.Text = ""
     End Sub
 
     Sub LockControls()
         txtData.Text = True
-        txtId.Text = True
+        txtClienteId.Text = True
         txtTotal.Text = True
-        txtId1.Text = True
+        txtId.Text = True
     End Sub
 
     Sub ShowButtons()
@@ -99,7 +99,7 @@ Public Class Compras
             MsgBox(ex.Message)
         End Try
         ListBox1.Enabled = True
-        Dim idx As Integer = ListBox1.FindString(txtId1.Text)
+        Dim idx As Integer = ListBox1.FindString(txtId.Text)
         ListBox1.SelectedIndex = idx
         ShowButtons()
     End Sub
@@ -108,15 +108,15 @@ Public Class Compras
         Dim contact As New ComprasC
         Try
             contact.Data = txtData.Text
-            contact.ClienteId = txtId.Text
-            contact.Id = txtId1.Text
+            contact.ClienteId = txtClienteId.Text
+            contact.Id = txtId.Text
             contact.Total = txtTotal.Text
         Catch ex As Exception
             MsgBox(ex.Message)
             Return False
         End Try
         If adding Then
-            submitcontact(contact)
+            SubmitContact(contact)
             ListBox1.Items.Add(contact)
         Else
             contact.Id = Label10.Text
@@ -127,7 +127,7 @@ Public Class Compras
     End Function
 
     Private Sub SubmitContact(ByVal C As ComprasC)
-        CMD.CommandText = "INSERT proj.Compra (preco,clientes_id,datas) " &
+        CMD.CommandText = "INSERT proj.Compra (preco,cliente_id,datas) " &
                           "VALUES (@preco, @cliente_id, @datas) "
 
         CMD.Parameters.Clear()
@@ -147,7 +147,7 @@ Public Class Compras
         CN.Close()
     End Sub
 
-    Private Sub UpdateContact(ByVal C As ComprasC) 'TODO: ver aqui
+    Private Sub UpdateContact(ByVal C As ComprasC) 'TODO: Não faz sentido apagar
         CMD.CommandText = "UPDATE proj.Evento " &
             "SET Morada = @Morada, " &
             "    Nome = @Name " &
@@ -166,7 +166,7 @@ Public Class Compras
         End Try
     End Sub
 
-    Private Sub RemoveContact(ByVal Id As String)
+    Private Sub RemoveContact(ByVal Id As String)  'TODO: Não faz sentido remover
         CMD.CommandText = "DELETE proj.Evento WHERE id=@id "
         CMD.Parameters.Clear()
         CMD.Parameters.AddWithValue("@id", Id) 'ver esta situação'
@@ -218,7 +218,7 @@ Public Class Compras
     Sub UnlockControls()
         'txtData.ReadOnly = False
         txtTotal.ReadOnly = False
-        txtId.ReadOnly = False
+        txtClienteId.ReadOnly = False
         txtData.ReadOnly = False
     End Sub
 
@@ -232,6 +232,5 @@ Public Class Compras
         HideButtons()
         ListBox1.Enabled = False
     End Sub
-
 
 End Class

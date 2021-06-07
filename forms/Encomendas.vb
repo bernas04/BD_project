@@ -144,7 +144,7 @@ Public Class Encomendas
                           "VALUES (@data_pedido, @data_entrega, @preco, @produto_codigo, @funcionario_n_func, @fornecedor_nif) "
 
         CMD.Parameters.Clear()
-
+        'CMD.Parameters.AddWithValue("@id", C.Id)
         CMD.Parameters.AddWithValue("@data_pedido", C.DataPedido)
         CMD.Parameters.AddWithValue("@data_entrega", C.DataEntrega)
         CMD.Parameters.AddWithValue("@preco", C.Conta)
@@ -163,11 +163,11 @@ Public Class Encomendas
         CN.Close()
     End Sub
 
-    Private Sub UpdateContact(ByVal C As EncomendasC) 'TODO: ver aqui
+    Private Sub UpdateContact(ByVal C As EncomendasC) 'todo: não faz sentido update
         CMD.CommandText = "UPDATE proj.Encomenda " &
             "SET data_pedido = @data_pedido, " &
             "    data_entrega = @data_entrega, " & "   preco = @preco,   " & "   produto_codigo = @produto_codigo,   " & "   funcionario_n_func = @funcionario_n_func,   " & "   funcionario_n_func = @funcionario_n_func   " &
-            "WHERE id=@id"
+            "WHERE id=@Id"
         CMD.Parameters.AddWithValue("@data_pedido", C.DataPedido)
         CMD.Parameters.AddWithValue("@data_entrega", C.DataEntrega)
         CMD.Parameters.AddWithValue("@preco", C.Conta)
@@ -184,8 +184,8 @@ Public Class Encomendas
         End Try
     End Sub
 
-    Private Sub RemoveContact(ByVal Id As String)
-        CMD.CommandText = "DELETE proj.Encomenda WHERE id=@id "
+    Private Sub RemoveContact(ByVal Id As String)   'todo: não faz sentido remover
+        CMD.CommandText = "DELETE proj.Encomenda WHERE id=@Id "
         CMD.Parameters.Clear()
         CMD.Parameters.AddWithValue("@id", Id) 'ver esta situação'
         CN.Open()
