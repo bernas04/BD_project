@@ -47,6 +47,7 @@ Partial Class Compras
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Funcionalidades.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -54,17 +55,17 @@ Partial Class Compras
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(339, 169)
+        Me.Label1.Location = New System.Drawing.Point(297, 127)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 20)
+        Me.Label1.Size = New System.Drawing.Size(0, 15)
         Me.Label1.TabIndex = 0
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(350, 181)
+        Me.Label2.Location = New System.Drawing.Point(306, 136)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(0, 20)
+        Me.Label2.Size = New System.Drawing.Size(0, 15)
         Me.Label2.TabIndex = 12
         '
         'Funcionalidades
@@ -85,59 +86,61 @@ Partial Class Compras
         Me.Funcionalidades.Controls.Add(Me.okbtn)
         Me.Funcionalidades.Controls.Add(Me.Label5)
         Me.Funcionalidades.Controls.Add(Me.Label6)
-        Me.Funcionalidades.Location = New System.Drawing.Point(14, 40)
-        Me.Funcionalidades.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Funcionalidades.Location = New System.Drawing.Point(12, 30)
         Me.Funcionalidades.Name = "Funcionalidades"
-        Me.Funcionalidades.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Funcionalidades.Size = New System.Drawing.Size(358, 541)
+        Me.Funcionalidades.Size = New System.Drawing.Size(313, 406)
         Me.Funcionalidades.TabIndex = 13
         Me.Funcionalidades.TabStop = False
         '
         'txtId
         '
         Me.txtId.AutoSize = True
-        Me.txtId.Location = New System.Drawing.Point(144, 290)
+        Me.txtId.Location = New System.Drawing.Point(126, 218)
         Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(61, 20)
+        Me.txtId.Size = New System.Drawing.Size(47, 15)
         Me.txtId.TabIndex = 22
         Me.txtId.Text = "Label12"
         Me.txtId.Visible = False
         '
         'txtClienteId
         '
-        Me.txtClienteId.Location = New System.Drawing.Point(143, 220)
+        Me.txtClienteId.Location = New System.Drawing.Point(125, 165)
+        Me.txtClienteId.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtClienteId.Name = "txtClienteId"
-        Me.txtClienteId.Size = New System.Drawing.Size(169, 27)
+        Me.txtClienteId.Size = New System.Drawing.Size(148, 23)
         Me.txtClienteId.TabIndex = 21
         '
         'txtData
         '
-        Me.txtData.Location = New System.Drawing.Point(143, 164)
+        Me.txtData.Location = New System.Drawing.Point(125, 123)
+        Me.txtData.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtData.Name = "txtData"
-        Me.txtData.Size = New System.Drawing.Size(169, 27)
+        Me.txtData.Size = New System.Drawing.Size(148, 23)
         Me.txtData.TabIndex = 20
         '
         'txtCodProd1
         '
-        Me.txtCodProd1.Location = New System.Drawing.Point(143, 114)
+        Me.txtCodProd1.Location = New System.Drawing.Point(125, 86)
+        Me.txtCodProd1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtCodProd1.Name = "txtCodProd1"
-        Me.txtCodProd1.Size = New System.Drawing.Size(169, 27)
+        Me.txtCodProd1.Size = New System.Drawing.Size(148, 23)
         Me.txtCodProd1.TabIndex = 19
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(143, 69)
+        Me.txtTotal.Location = New System.Drawing.Point(125, 52)
+        Me.txtTotal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(169, 27)
+        Me.txtTotal.Size = New System.Drawing.Size(148, 23)
         Me.txtTotal.TabIndex = 18
         '
         'Label11
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label11.Location = New System.Drawing.Point(48, 224)
+        Me.Label11.Location = New System.Drawing.Point(42, 168)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(76, 19)
+        Me.Label11.Size = New System.Drawing.Size(61, 16)
         Me.Label11.TabIndex = 17
         Me.Label11.Text = "Id Cliente"
         '
@@ -145,9 +148,9 @@ Partial Class Compras
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.Location = New System.Drawing.Point(26, 164)
+        Me.Label10.Location = New System.Drawing.Point(23, 123)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(98, 19)
+        Me.Label10.Size = New System.Drawing.Size(82, 16)
         Me.Label10.TabIndex = 16
         Me.Label10.Text = "Data Compra"
         '
@@ -155,9 +158,9 @@ Partial Class Compras
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(6, 118)
+        Me.Label4.Location = New System.Drawing.Point(5, 88)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(118, 19)
+        Me.Label4.Size = New System.Drawing.Size(96, 16)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Codigo Produto"
         '
@@ -165,18 +168,17 @@ Partial Class Compras
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Times New Roman", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(81, 73)
+        Me.Label3.Location = New System.Drawing.Point(71, 55)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(43, 19)
+        Me.Label3.Size = New System.Drawing.Size(35, 16)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Total"
         '
         'cancelbtn
         '
-        Me.cancelbtn.Location = New System.Drawing.Point(75, 404)
-        Me.cancelbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cancelbtn.Location = New System.Drawing.Point(66, 303)
         Me.cancelbtn.Name = "cancelbtn"
-        Me.cancelbtn.Size = New System.Drawing.Size(86, 31)
+        Me.cancelbtn.Size = New System.Drawing.Size(75, 23)
         Me.cancelbtn.TabIndex = 13
         Me.cancelbtn.Text = "Cancel"
         Me.cancelbtn.UseVisualStyleBackColor = True
@@ -184,40 +186,36 @@ Partial Class Compras
         '
         'editbtn
         '
-        Me.editbtn.Location = New System.Drawing.Point(128, 404)
-        Me.editbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.editbtn.Location = New System.Drawing.Point(112, 303)
         Me.editbtn.Name = "editbtn"
-        Me.editbtn.Size = New System.Drawing.Size(86, 31)
+        Me.editbtn.Size = New System.Drawing.Size(75, 23)
         Me.editbtn.TabIndex = 12
         Me.editbtn.Text = "Edit"
         Me.editbtn.UseVisualStyleBackColor = True
         '
         'delbtn
         '
-        Me.delbtn.Location = New System.Drawing.Point(226, 404)
-        Me.delbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.delbtn.Location = New System.Drawing.Point(198, 303)
         Me.delbtn.Name = "delbtn"
-        Me.delbtn.Size = New System.Drawing.Size(86, 31)
+        Me.delbtn.Size = New System.Drawing.Size(75, 23)
         Me.delbtn.TabIndex = 11
         Me.delbtn.Text = "Delete"
         Me.delbtn.UseVisualStyleBackColor = True
         '
         'Addbtn
         '
-        Me.Addbtn.Location = New System.Drawing.Point(35, 404)
-        Me.Addbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Addbtn.Location = New System.Drawing.Point(31, 303)
         Me.Addbtn.Name = "Addbtn"
-        Me.Addbtn.Size = New System.Drawing.Size(86, 31)
+        Me.Addbtn.Size = New System.Drawing.Size(75, 23)
         Me.Addbtn.TabIndex = 10
         Me.Addbtn.Text = "Add"
         Me.Addbtn.UseVisualStyleBackColor = True
         '
         'okbtn
         '
-        Me.okbtn.Location = New System.Drawing.Point(201, 404)
-        Me.okbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.okbtn.Location = New System.Drawing.Point(176, 303)
         Me.okbtn.Name = "okbtn"
-        Me.okbtn.Size = New System.Drawing.Size(86, 31)
+        Me.okbtn.Size = New System.Drawing.Size(75, 23)
         Me.okbtn.TabIndex = 8
         Me.okbtn.Text = "Ok"
         Me.okbtn.UseVisualStyleBackColor = True
@@ -226,39 +224,37 @@ Partial Class Compras
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(124, 251)
+        Me.Label5.Location = New System.Drawing.Point(108, 188)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(0, 20)
+        Me.Label5.Size = New System.Drawing.Size(0, 15)
         Me.Label5.TabIndex = 3
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(39, 61)
+        Me.Label6.Location = New System.Drawing.Point(34, 46)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(0, 19)
+        Me.Label6.Size = New System.Drawing.Size(0, 15)
         Me.Label6.TabIndex = 0
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(454, 14)
+        Me.Label9.Location = New System.Drawing.Point(397, 10)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(26, 22)
+        Me.Label9.Size = New System.Drawing.Size(22, 19)
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Id"
         '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.ListBox1)
-        Me.GroupBox2.Location = New System.Drawing.Point(416, 40)
-        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.GroupBox2.Location = New System.Drawing.Point(364, 30)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.GroupBox2.Size = New System.Drawing.Size(485, 553)
+        Me.GroupBox2.Size = New System.Drawing.Size(424, 415)
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         '
@@ -267,20 +263,19 @@ Partial Class Compras
         Me.ListBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ListBox1.ForeColor = System.Drawing.Color.Black
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 20
-        Me.ListBox1.Location = New System.Drawing.Point(38, 0)
-        Me.ListBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.ListBox1.ItemHeight = 15
+        Me.ListBox1.Location = New System.Drawing.Point(33, 0)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(428, 504)
+        Me.ListBox1.Size = New System.Drawing.Size(375, 379)
         Me.ListBox1.TabIndex = 0
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(799, 14)
+        Me.Label7.Location = New System.Drawing.Point(699, 10)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(102, 22)
+        Me.Label7.Size = New System.Drawing.Size(79, 19)
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "Preço Total"
         '
@@ -288,9 +283,9 @@ Partial Class Compras
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(690, 14)
+        Me.Label8.Location = New System.Drawing.Point(604, 10)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(88, 22)
+        Me.Label8.Size = New System.Drawing.Size(68, 19)
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "Id Cliente"
         '
@@ -298,17 +293,27 @@ Partial Class Compras
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label12.Location = New System.Drawing.Point(563, 14)
+        Me.Label12.Location = New System.Drawing.Point(493, 10)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(47, 22)
+        Me.Label12.Size = New System.Drawing.Size(38, 19)
         Me.Label12.TabIndex = 17
         Me.Label12.Text = "Data"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(77, 13)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(186, 23)
+        Me.Button1.TabIndex = 18
+        Me.Button1.Text = "Detalhes de Compra"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Compras
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(914, 600)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -317,7 +322,6 @@ Partial Class Compras
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Compras"
         Me.Text = "Compras"
         Me.Funcionalidades.ResumeLayout(False)
@@ -354,4 +358,5 @@ Partial Class Compras
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Button1 As Button
 End Class

@@ -51,6 +51,7 @@ Partial Class Seccao
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.Funcionalidades.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -118,6 +119,7 @@ Partial Class Seccao
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.txtCodigo)
         Me.GroupBox1.Controls.Add(Me.cancelbtn2)
         Me.GroupBox1.Controls.Add(Me.editbtn2)
@@ -340,6 +342,15 @@ Partial Class Seccao
         Me.Label11.TabIndex = 11
         Me.Label11.Text = "Nº Gestor"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(30, 10)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(106, 23)
+        Me.Button1.TabIndex = 15
+        Me.Button1.Text = "Criar Evento"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Seccao
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -392,4 +403,5 @@ Partial Class Seccao
     Friend WithEvents Label11 As Label
     Friend WithEvents txtName2 As TextBox
     Friend WithEvents txtCodigo As Label
+    Friend WithEvents Button1 As Button
 End Class

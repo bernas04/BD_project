@@ -41,6 +41,7 @@ Partial Class NaoClientesvb
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.Funcionalidades.SuspendLayout()
         Me.SuspendLayout()
@@ -98,6 +99,7 @@ Partial Class NaoClientesvb
         '
         'Funcionalidades
         '
+        Me.Funcionalidades.Controls.Add(Me.Button1)
         Me.Funcionalidades.Controls.Add(Me.cancelbtn)
         Me.Funcionalidades.Controls.Add(Me.editbtn)
         Me.Funcionalidades.Controls.Add(Me.delbtn)
@@ -230,6 +232,15 @@ Partial Class NaoClientesvb
         Me.Label1.Size = New System.Drawing.Size(0, 15)
         Me.Label1.TabIndex = 6
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(47, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(124, 23)
+        Me.Button1.TabIndex = 14
+        Me.Button1.Text = "Inscrever evento"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'NaoClientesvb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -270,4 +281,5 @@ Partial Class NaoClientesvb
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class
