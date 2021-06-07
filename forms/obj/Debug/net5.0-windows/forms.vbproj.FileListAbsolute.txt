@@ -157,3 +157,7 @@ C:\Users\Admin\bd2\BD_project\forms\obj\Debug\net5.0-windows\ref\forms.dll
 C:\Users\Admin\bd2\BD_project\forms\obj\Debug\net5.0-windows\forms.pdb
 C:\Users\Admin\bd2\BD_project\forms\obj\Debug\net5.0-windows\forms.genruntimeconfig.cache
 C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.ProdutoPage.resources
+C:\Users\Admin\Desktop\BD_project\forms\obj\Debug\net5.0-windows\forms.Clientes.resources
+C:\Users\Admin\Desktop\BD_project\forms\obj\Debug\net5.0-windows\forms.Funcionarios.resources
+C:\Users\Admin\Desktop\BD_project\forms\obj\Debug\net5.0-windows\forms.NaoClientesvb.resources
+C:\Users\Admin\Desktop\BD_project\forms\obj\Debug\net5.0-windows\forms.ProdutoPage.resources
