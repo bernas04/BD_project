@@ -38,8 +38,10 @@ Partial Class ProdutoPage
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -150,15 +152,15 @@ Partial Class ProdutoPage
         '
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(492, 229)
+        Me.ListBox1.Location = New System.Drawing.Point(564, 229)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(262, 154)
+        Me.ListBox1.Size = New System.Drawing.Size(190, 154)
         Me.ListBox1.TabIndex = 13
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(511, 200)
+        Me.Label8.Location = New System.Drawing.Point(554, 201)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(243, 15)
         Me.Label8.TabIndex = 14
@@ -166,21 +168,12 @@ Partial Class ProdutoPage
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(61, 275)
+        Me.Button1.Location = New System.Drawing.Point(124, 304)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(94, 23)
         Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Button1"
+        Me.Button1.Text = "Add product"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(188, 275)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -191,11 +184,40 @@ Partial Class ProdutoPage
         Me.Label9.TabIndex = 17
         Me.Label9.Visible = False
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(124, 275)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(101, 23)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Save Changes"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'ListBox2
+        '
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.ItemHeight = 15
+        Me.ListBox2.Location = New System.Drawing.Point(310, 229)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(214, 154)
+        Me.ListBox2.TabIndex = 18
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(310, 211)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(190, 15)
+        Me.Label10.TabIndex = 19
+        Me.Label10.Text = "Caso tenhas dúvidas qual a Secção"
+        '
         'ProdutoPage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -237,6 +259,8 @@ Partial Class ProdutoPage
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Label9 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents Label10 As Label
 End Class
