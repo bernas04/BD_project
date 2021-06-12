@@ -31,7 +31,7 @@
         End Get
         Set(ByVal value As String)
             If value Is Nothing Or Not value.Contains(":") Or value = "" Then
-                Throw New Exception("Hour field can’t be empty")
+                Throw New Exception("Hour field can’t be empty or is in the incorrect format [hh:mm]]")
                 Exit Property
             End If
             _hora = value

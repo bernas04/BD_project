@@ -25,11 +25,13 @@ Partial Class Eventos
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.cancelbtn = New System.Windows.Forms.Button()
         Me.editbtn = New System.Windows.Forms.Button()
-        Me.delbtn = New System.Windows.Forms.Button()
         Me.Addbtn = New System.Windows.Forms.Button()
         Me.okbtn = New System.Windows.Forms.Button()
         Me.txtVagas = New System.Windows.Forms.TextBox()
@@ -46,9 +48,6 @@ Partial Class Eventos
         Me.txtHora = New System.Windows.Forms.TextBox()
         Me.txtData = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.Funcionalidades.SuspendLayout()
         Me.SuspendLayout()
@@ -90,6 +89,36 @@ Partial Class Eventos
         Me.GroupBox2.Size = New System.Drawing.Size(546, 525)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label13.Location = New System.Drawing.Point(360, 24)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(56, 22)
+        Me.Label13.TabIndex = 14
+        Me.Label13.Text = "Preço"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label12.Location = New System.Drawing.Point(259, 24)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(67, 22)
+        Me.Label12.TabIndex = 13
+        Me.Label12.Text = "Secção"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label11.Location = New System.Drawing.Point(172, 24)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(50, 22)
+        Me.Label11.TabIndex = 12
+        Me.Label11.Text = "Hora"
         '
         'ListBox1
         '
@@ -133,16 +162,6 @@ Partial Class Eventos
         Me.editbtn.TabIndex = 12
         Me.editbtn.Text = "Edit"
         Me.editbtn.UseVisualStyleBackColor = True
-        '
-        'delbtn
-        '
-        Me.delbtn.Location = New System.Drawing.Point(254, 384)
-        Me.delbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.delbtn.Name = "delbtn"
-        Me.delbtn.Size = New System.Drawing.Size(97, 29)
-        Me.delbtn.TabIndex = 11
-        Me.delbtn.Text = "Delete"
-        Me.delbtn.UseVisualStyleBackColor = True
         '
         'Addbtn
         '
@@ -222,7 +241,6 @@ Partial Class Eventos
         Me.Funcionalidades.Controls.Add(Me.txtData)
         Me.Funcionalidades.Controls.Add(Me.cancelbtn)
         Me.Funcionalidades.Controls.Add(Me.editbtn)
-        Me.Funcionalidades.Controls.Add(Me.delbtn)
         Me.Funcionalidades.Controls.Add(Me.Addbtn)
         Me.Funcionalidades.Controls.Add(Me.okbtn)
         Me.Funcionalidades.Controls.Add(Me.txtVagas)
@@ -243,9 +261,8 @@ Partial Class Eventos
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(42, 330)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(65, 19)
+        Me.Label10.Size = New System.Drawing.Size(0, 19)
         Me.Label10.TabIndex = 19
-        Me.Label10.Text = "Label10"
         Me.Label10.Visible = False
         '
         'txtCodSec
@@ -305,36 +322,6 @@ Partial Class Eventos
         Me.Label1.Size = New System.Drawing.Size(0, 19)
         Me.Label1.TabIndex = 6
         '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label11.Location = New System.Drawing.Point(172, 24)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(50, 22)
-        Me.Label11.TabIndex = 12
-        Me.Label11.Text = "Hora"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label12.Location = New System.Drawing.Point(259, 24)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(67, 22)
-        Me.Label12.TabIndex = 13
-        Me.Label12.Text = "Secção"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label13.Location = New System.Drawing.Point(360, 24)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(56, 22)
-        Me.Label13.TabIndex = 14
-        Me.Label13.Text = "Preço"
-        '
         'Eventos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
@@ -362,7 +349,6 @@ Partial Class Eventos
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents cancelbtn As Button
     Friend WithEvents editbtn As Button
-    Friend WithEvents delbtn As Button
     Friend WithEvents Addbtn As Button
     Friend WithEvents okbtn As Button
     Friend WithEvents txtVagas As TextBox

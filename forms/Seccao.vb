@@ -19,6 +19,8 @@ Public Class Seccao
         CN.Open()
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
+        Button1.Visible = False
+        LockControls()
         ListBox1.Items.Clear()
         While RDR.Read
             Dim C As New SecçaoC
@@ -42,9 +44,12 @@ Public Class Seccao
         txtName2.Text = contact.Name
         txtMorada.Text = contact.ID
         txtCodigo.Text = contact.Codigo
+        Eventos.Label10.Text = contact.Codigo
     End Sub
+
     Private Sub bttnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancelbtn2.Click
         ListBox1.Enabled = True
+        Button1.Visible = True
         If ListBox1.Items.Count > 0 Then
             currentContact = ListBox1.SelectedIndex
             If currentContact < 0 Then currentContact = 0
@@ -57,6 +62,7 @@ Public Class Seccao
     End Sub
 
     Private Sub bttnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles okbtn2.Click
+        Button1.Visible = True
         Try
             SaveFornecedor()
         Catch ex As Exception
@@ -68,26 +74,8 @@ Public Class Seccao
         ShowButtons()
     End Sub
 
-    Private Sub bttnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delbtn2.Click
-        If ListBox1.SelectedIndex > -1 Then
-            Try
-                RemoveContact(CType(ListBox1.SelectedItem, SecçaoC).Codigo)
-            Catch ex As Exception
-                MsgBox(ex.Message)
-                Exit Sub
-            End Try
-            ListBox1.Items.RemoveAt(ListBox1.SelectedIndex)
-            If currentContact = ListBox1.Items.Count Then currentContact = ListBox1.Items.Count - 1
-            If currentContact = -1 Then
-                ClearFields()
-                MsgBox("There are no more contacts")
-            Else
-                ShowFornecedor()
-            End If
-        End If
-    End Sub
-
     Private Sub bttnAdd_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles addbtn2.Click
+        Button1.Visible = False
         adding = True
         ClearFields()
         HideButtons()
@@ -124,28 +112,18 @@ Public Class Seccao
             ListBox1.Items.Add(contact)
         Else
             contact.Codigo = txtCodigo.Text
-            UpdateContact(contact)
             ListBox1.Items(currentContact) = contact
         End If
         Return True
     End Function
 
-    Private Sub bttnEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles editbtn2.Click
-        currentContact = ListBox1.SelectedIndex
-        If currentContact < 0 Then
-            MsgBox("Please select a contact to edit")
-            Exit Sub
-        End If
-        adding = False
-        HideButtons()
-        ListBox1.Enabled = False
-    End Sub
+
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
         If ListBox1.SelectedIndex > -1 Then
             currentContact = ListBox1.SelectedIndex
+            Button1.Visible = True
             ShowFornecedor()
-
         End If
     End Sub
 
@@ -163,8 +141,6 @@ Public Class Seccao
     Sub ShowButtons()
         LockControls()
         addbtn2.Visible = True
-        delbtn2.Visible = True
-        editbtn2.Visible = True
         okbtn2.Visible = False
         cancelbtn2.Visible = False
     End Sub
@@ -180,8 +156,6 @@ Public Class Seccao
     Sub HideButtons()
         UnlockControls()
         addbtn2.Visible = False
-        delbtn2.Visible = False
-        editbtn2.Visible = False
         okbtn2.Visible = True
         cancelbtn2.Visible = True
     End Sub
@@ -206,43 +180,7 @@ Public Class Seccao
         CN.Close()
     End Sub
 
-
-    Private Sub UpdateContact(ByVal C As SecçaoC)
-        CMD.CommandText = "UPDATE proj.Secçao " &
-            "SET loja_NIF = @Loja_Nif, " &
-            "    funcionario_num = @ID, " &
-            "    nome = @Name " &
-            "WHERE codigo=@Codigo"
-        CMD.Parameters.Clear()
-        CMD.Parameters.AddWithValue("@Loja_Nif", 154736509)
-        CMD.Parameters.AddWithValue("@Name", C.Name)
-        CMD.Parameters.AddWithValue("@Codigo", C.Codigo)
-        CMD.Parameters.AddWithValue("@ID", C.ID)
-
-        CN.Open()
-        Try
-            CMD.ExecuteNonQuery()
-        Catch ex As Exception
-            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
-        Finally
-            CN.Close()
-        End Try
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Eventos.Show()
     End Sub
-
-
-    Private Sub RemoveContact(ByVal Codigo As String)
-        CMD.CommandText = "DELETE proj.Secçao WHERE codigo=@Codigo "
-        CMD.Parameters.Clear()
-        CMD.Parameters.AddWithValue("@Codigo", Codigo)
-        CN.Open()
-        Try
-            CMD.ExecuteNonQuery()
-        Catch ex As Exception
-            Throw New Exception("Failed to delete contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
-        Finally
-            CN.Close()
-        End Try
-    End Sub
-
-
 End Class

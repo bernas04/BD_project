@@ -17,7 +17,7 @@ Public Class Encomendas
         CMD.Connection = CN
         CMD.CommandText = "SELECT * FROM proj.Encomenda"
         CN.Open()
-
+        LockControls()
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
         ListBox1.Items.Clear()
@@ -46,6 +46,8 @@ Public Class Encomendas
         txtNifForne.Text = contact.niFornecedor
         txtNumFunc.Text = contact.nFunct
         txtPreco.Text = contact.Conta
+        txtId.Text = contact.Id
+        DetalhesEnomendas.idEncomenda.Text = txtId.Text
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -63,47 +65,31 @@ Public Class Encomendas
         End If
     End Sub
 
-    Sub ClearFields()
-        txtCodProds.Text = ""
-        txtDataEntrega.Text = ""
-        txtDataPedido.Text = ""
-        txtNifForne.Text = ""
-        txtNumFunc.Text = ""
-        txtPreco.Text = ""
-    End Sub
+
 
     Sub LockControls()
-        txtCodProds.Text = True
-        txtDataEntrega.Text = True
-        txtDataPedido.Text = True
-        txtNifForne.Text = True
-        txtNumFunc.Text = True
-        txtPreco.Text = True
+        txtCodProds.ReadOnly = True
+        txtDataEntrega.ReadOnly = True
+        txtDataPedido.ReadOnly = True
+        txtNifForne.ReadOnly = True
+        txtNumFunc.ReadOnly = True
+        txtPreco.ReadOnly = True
     End Sub
 
-    Sub ShowButtons()
-        LockControls()
-        Addbtn.Visible = True
-        delbtn.Visible = True
-        editbtn.Visible = True
-        okbtn.Visible = False
-        cancelbtn.Visible = False
-    End Sub
 
-    Private Sub cancelbtn_Click(sender As Object, e As EventArgs) Handles cancelbtn.Click
+
+    Private Sub cancelbtn_Click(sender As Object, e As EventArgs)
         ListBox1.Enabled = True
         If ListBox1.Items.Count > 0 Then
             currentContact = ListBox1.SelectedIndex
             If currentContact < 0 Then currentContact = 0
             ShowEncomendas()
         Else
-            ClearFields()
             LockControls()
         End If
-        ShowButtons()
     End Sub
 
-    Private Sub okbtn_Click(sender As Object, e As EventArgs) Handles okbtn.Click
+    Private Sub okbtn_Click(sender As Object, e As EventArgs)
         Try
             SaveEncomendas()
         Catch ex As Exception
@@ -112,7 +98,6 @@ Public Class Encomendas
         ListBox1.Enabled = True
         Dim idx As Integer = ListBox1.FindString(txtId.Text)
         ListBox1.SelectedIndex = idx
-        ShowButtons()
     End Sub
 
     Private Function SaveEncomendas() As Boolean
@@ -129,11 +114,10 @@ Public Class Encomendas
             Return False
         End Try
         If adding Then
-            submitcontact(contact)
+            SubmitContact(contact)
             ListBox1.Items.Add(contact)
         Else
             contact.Id = Label10.Text
-            UpdateContact(contact)
             ListBox1.Items(currentContact) = contact
         End If
         Return True
@@ -151,7 +135,6 @@ Public Class Encomendas
         CMD.Parameters.AddWithValue("@produto_codigo", C.CodProd)
         CMD.Parameters.AddWithValue("@funcionario_n_func", C.nFunct)
         CMD.Parameters.AddWithValue("@fornecedor_nif", C.niFornecedor)
-
         CN.Open()
         Try
             CMD.ExecuteNonQuery()
@@ -163,94 +146,9 @@ Public Class Encomendas
         CN.Close()
     End Sub
 
-    Private Sub UpdateContact(ByVal C As EncomendasC) 'todo: não faz sentido update
-        CMD.CommandText = "UPDATE proj.Encomenda " &
-            "SET data_pedido = @data_pedido, " &
-            "    data_entrega = @data_entrega, " & "   preco = @preco,   " & "   produto_codigo = @produto_codigo,   " & "   funcionario_n_func = @funcionario_n_func,   " & "   funcionario_n_func = @funcionario_n_func   " &
-            "WHERE id=@Id"
-        CMD.Parameters.AddWithValue("@data_pedido", C.DataPedido)
-        CMD.Parameters.AddWithValue("@data_entrega", C.DataEntrega)
-        CMD.Parameters.AddWithValue("@preco", C.Conta)
-        CMD.Parameters.AddWithValue("@produto_codigo", C.CodProd)
-        CMD.Parameters.AddWithValue("@funcionario_n_func", C.nFunct)
-        CMD.Parameters.AddWithValue("@fornecedor_nif", C.niFornecedor)
-        CN.Open()
-        Try
-            CMD.ExecuteNonQuery()
-        Catch ex As Exception
-            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
-        Finally
-            CN.Close()
-        End Try
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        DetalhesEnomendas.Show()
     End Sub
 
-    Private Sub RemoveContact(ByVal Id As String)   'todo: não faz sentido remover
-        CMD.CommandText = "DELETE proj.Encomenda WHERE id=@Id "
-        CMD.Parameters.Clear()
-        CMD.Parameters.AddWithValue("@id", Id) 'ver esta situação'
-        CN.Open()
-        Try
-            CMD.ExecuteNonQuery()
-        Catch ex As Exception
-            Throw New Exception("Failed to delete contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
-        Finally
-            CN.Close()
-        End Try
-    End Sub
-
-    Private Sub delbtn_Click(sender As Object, e As EventArgs) Handles delbtn.Click
-        If ListBox1.SelectedIndex > -1 Then
-            Try
-                RemoveContact(CType(ListBox1.SelectedItem, EncomendasC).Id) 'ver aqui
-            Catch ex As Exception
-                MsgBox(ex.Message)
-                Exit Sub
-            End Try
-            ListBox1.Items.RemoveAt(ListBox1.SelectedIndex)
-            If currentContact = ListBox1.Items.Count Then currentContact = ListBox1.Items.Count - 1
-            If currentContact = -1 Then
-                ClearFields()
-                MsgBox("There are no more contacts")
-            Else
-                ShowEncomendas()
-            End If
-        End If
-    End Sub
-
-    Private Sub Addbtn_Click(sender As Object, e As EventArgs) Handles Addbtn.Click
-        adding = True
-        ClearFields()
-        HideButtons()
-        ListBox1.Enabled = False
-    End Sub
-
-    Sub HideButtons()
-        UnlockControls()
-        Addbtn.Visible = False
-        delbtn.Visible = False
-        editbtn.Visible = False
-        okbtn.Visible = True
-        cancelbtn.Visible = True
-    End Sub
-
-    Sub UnlockControls()
-        txtCodProds.Text = False
-        txtDataEntrega.Text = False
-        txtDataPedido.Text = False
-        txtNifForne.Text = False
-        txtNumFunc.Text = False
-        txtPreco.Text = False
-    End Sub
-
-    Private Sub editbtn_Click(sender As Object, e As EventArgs) Handles editbtn.Click
-        currentContact = ListBox1.SelectedIndex
-        If currentContact < 0 Then
-            MsgBox("Please select a contact to edit")
-            Exit Sub
-        End If
-        adding = False
-        HideButtons()
-        ListBox1.Enabled = False
-    End Sub
 
 End Class

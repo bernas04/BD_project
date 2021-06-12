@@ -40,7 +40,7 @@
     End Property
 
     Overrides Function ToString() As String
-        Return _clienteId & "       " & _dataCompra & "                 " & _Id & "                     " & _total
+        Return _Id & "       " & _dataCompra & "                 " & _clienteId & "                     " & _total
     End Function
 
     Public Sub New()

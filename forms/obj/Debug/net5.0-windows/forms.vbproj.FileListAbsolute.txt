@@ -202,3 +202,8 @@ C:\Users\Admin\Desktop\BD_project\forms\obj\Debug\net5.0-windows\forms.NaoClient
 C:\Users\Admin\Desktop\BD_project\forms\obj\Debug\net5.0-windows\forms.ProdutoPage.resources
 >>>>>>> bc84e3528d7d82bcd72508ce5e1f65b94a7e9d38
 C:\Users\Admin\Desktop\BD_project\forms\obj\Debug\net5.0-windows\forms.PáginaFuncionario.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.PáginaFuncionario.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.DetalhesCompra.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.AllEvents.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Participants.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.DetalhesEnomendas.resources

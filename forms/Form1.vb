@@ -75,7 +75,7 @@ Public Class Form1
     End Sub
 
     Private Sub PictureBox_Eventos_Click(sender As Object, e As EventArgs) Handles PictureBox_Eventos.Click
-        Eventos.Show()
+        AllEvents.Show()
     End Sub
 
     Private Sub Label_Eventos_Click(sender As Object, e As EventArgs) Handles Label_Eventos.Click

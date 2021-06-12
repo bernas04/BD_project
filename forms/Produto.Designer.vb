@@ -41,9 +41,9 @@ Partial Class Produto
         Me.Label7.AutoSize = True
         Me.Label7.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(119, 9)
+        Me.Label7.Location = New System.Drawing.Point(136, 12)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(115, 21)
+        Me.Label7.Size = New System.Drawing.Size(146, 27)
         Me.Label7.TabIndex = 16
         Me.Label7.Text = "Preço (Euros)"
         '
@@ -51,9 +51,9 @@ Partial Class Produto
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(33, 9)
+        Me.Label6.Location = New System.Drawing.Point(38, 12)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(55, 21)
+        Me.Label6.Size = New System.Drawing.Size(70, 27)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Nome"
         '
@@ -64,53 +64,58 @@ Partial Class Produto
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Addbtn)
         Me.GroupBox2.Controls.Add(Me.editbtn)
-        Me.GroupBox2.Location = New System.Drawing.Point(435, 30)
+        Me.GroupBox2.Location = New System.Drawing.Point(497, 40)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.GroupBox2.Size = New System.Drawing.Size(353, 412)
+        Me.GroupBox2.Size = New System.Drawing.Size(403, 549)
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(0, 59)
+        Me.Label4.Location = New System.Drawing.Point(0, 79)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(41, 15)
+        Me.Label4.Size = New System.Drawing.Size(53, 20)
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "Label4"
         Me.Label4.Visible = False
         '
         'txtProd
         '
-        Me.txtProd.Location = New System.Drawing.Point(113, 16)
+        Me.txtProd.Location = New System.Drawing.Point(129, 21)
+        Me.txtProd.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtProd.Name = "txtProd"
-        Me.txtProd.Size = New System.Drawing.Size(171, 23)
+        Me.txtProd.Size = New System.Drawing.Size(195, 27)
         Me.txtProd.TabIndex = 15
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(0, 19)
+        Me.Label3.Location = New System.Drawing.Point(0, 25)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 15)
+        Me.Label3.Size = New System.Drawing.Size(133, 20)
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Produto escolhido:"
         '
         'Addbtn
         '
-        Me.Addbtn.Location = New System.Drawing.Point(6, 158)
+        Me.Addbtn.Location = New System.Drawing.Point(7, 211)
+        Me.Addbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Addbtn.Name = "Addbtn"
-        Me.Addbtn.Size = New System.Drawing.Size(127, 26)
+        Me.Addbtn.Size = New System.Drawing.Size(145, 35)
         Me.Addbtn.TabIndex = 10
         Me.Addbtn.Text = "Adicionar novo produto"
         Me.Addbtn.UseVisualStyleBackColor = True
         '
         'editbtn
         '
-        Me.editbtn.Location = New System.Drawing.Point(193, 161)
+        Me.editbtn.Location = New System.Drawing.Point(221, 215)
+        Me.editbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.editbtn.Name = "editbtn"
-        Me.editbtn.Size = New System.Drawing.Size(127, 23)
+        Me.editbtn.Size = New System.Drawing.Size(145, 31)
         Me.editbtn.TabIndex = 12
         Me.editbtn.Text = "Editar o produto selecionado"
         Me.editbtn.UseVisualStyleBackColor = True
@@ -120,41 +125,43 @@ Partial Class Produto
         Me.ListBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ListBox1.ForeColor = System.Drawing.Color.Black
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(33, 33)
+        Me.ListBox1.ItemHeight = 20
+        Me.ListBox1.Location = New System.Drawing.Point(38, 44)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(375, 379)
+        Me.ListBox1.Size = New System.Drawing.Size(428, 504)
         Me.ListBox1.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(306, 136)
+        Me.Label1.Location = New System.Drawing.Point(350, 181)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 15)
+        Me.Label1.Size = New System.Drawing.Size(0, 20)
         Me.Label1.TabIndex = 12
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(240, 9)
+        Me.Label2.Location = New System.Drawing.Point(274, 12)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(153, 21)
+        Me.Label2.Size = New System.Drawing.Size(193, 27)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "Unidades em stock"
         '
         'Produto
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(914, 600)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "Produto"
         Me.Text = "Produto"
         Me.GroupBox2.ResumeLayout(False)

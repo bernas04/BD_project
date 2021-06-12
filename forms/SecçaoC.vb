@@ -50,7 +50,7 @@
     End Property
 
     Overrides Function ToString() As String
-        Return _codigo & "     " & _name & "       " & _ID & "      "
+        Return _codigo & "                                  " & _name & "                                       " & _ID
     End Function
 
     Public Sub New()

@@ -16,6 +16,7 @@ Public Class Produto
         CMD.Connection = CN
         CMD.CommandText = "SELECT * FROM proj.Produto"
         CN.Open()
+        txtProd.ReadOnly = True
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
         ListBox1.Items.Clear()

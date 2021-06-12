@@ -33,14 +33,11 @@ Partial Class Encomendas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.cancelbtn = New System.Windows.Forms.Button()
-        Me.editbtn = New System.Windows.Forms.Button()
-        Me.Addbtn = New System.Windows.Forms.Button()
-        Me.okbtn = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Funcionalidades = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.txtId = New System.Windows.Forms.Label()
         Me.txtNifForne = New System.Windows.Forms.TextBox()
         Me.txtNumFunc = New System.Windows.Forms.TextBox()
@@ -48,7 +45,6 @@ Partial Class Encomendas
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtDataEntrega = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.delbtn = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -162,48 +158,6 @@ Partial Class Encomendas
         Me.GroupBox2.TabIndex = 21
         Me.GroupBox2.TabStop = False
         '
-        'cancelbtn
-        '
-        Me.cancelbtn.Location = New System.Drawing.Point(75, 404)
-        Me.cancelbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.cancelbtn.Name = "cancelbtn"
-        Me.cancelbtn.Size = New System.Drawing.Size(86, 31)
-        Me.cancelbtn.TabIndex = 13
-        Me.cancelbtn.Text = "Cancel"
-        Me.cancelbtn.UseVisualStyleBackColor = True
-        Me.cancelbtn.Visible = False
-        '
-        'editbtn
-        '
-        Me.editbtn.Location = New System.Drawing.Point(128, 404)
-        Me.editbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.editbtn.Name = "editbtn"
-        Me.editbtn.Size = New System.Drawing.Size(86, 31)
-        Me.editbtn.TabIndex = 12
-        Me.editbtn.Text = "Edit"
-        Me.editbtn.UseVisualStyleBackColor = True
-        '
-        'Addbtn
-        '
-        Me.Addbtn.Location = New System.Drawing.Point(35, 404)
-        Me.Addbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.Addbtn.Name = "Addbtn"
-        Me.Addbtn.Size = New System.Drawing.Size(86, 31)
-        Me.Addbtn.TabIndex = 10
-        Me.Addbtn.Text = "Add"
-        Me.Addbtn.UseVisualStyleBackColor = True
-        '
-        'okbtn
-        '
-        Me.okbtn.Location = New System.Drawing.Point(201, 404)
-        Me.okbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.okbtn.Name = "okbtn"
-        Me.okbtn.Size = New System.Drawing.Size(86, 31)
-        Me.okbtn.TabIndex = 8
-        Me.okbtn.Text = "Ok"
-        Me.okbtn.UseVisualStyleBackColor = True
-        Me.okbtn.Visible = False
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -233,6 +187,7 @@ Partial Class Encomendas
         '
         'Funcionalidades
         '
+        Me.Funcionalidades.Controls.Add(Me.Button1)
         Me.Funcionalidades.Controls.Add(Me.txtId)
         Me.Funcionalidades.Controls.Add(Me.txtNifForne)
         Me.Funcionalidades.Controls.Add(Me.txtNumFunc)
@@ -246,11 +201,6 @@ Partial Class Encomendas
         Me.Funcionalidades.Controls.Add(Me.Label10)
         Me.Funcionalidades.Controls.Add(Me.Label4)
         Me.Funcionalidades.Controls.Add(Me.Label3)
-        Me.Funcionalidades.Controls.Add(Me.cancelbtn)
-        Me.Funcionalidades.Controls.Add(Me.editbtn)
-        Me.Funcionalidades.Controls.Add(Me.delbtn)
-        Me.Funcionalidades.Controls.Add(Me.Addbtn)
-        Me.Funcionalidades.Controls.Add(Me.okbtn)
         Me.Funcionalidades.Controls.Add(Me.Label6)
         Me.Funcionalidades.Location = New System.Drawing.Point(14, 37)
         Me.Funcionalidades.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -260,14 +210,22 @@ Partial Class Encomendas
         Me.Funcionalidades.TabIndex = 20
         Me.Funcionalidades.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(9, 433)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(302, 28)
+        Me.Button1.TabIndex = 29
+        Me.Button1.Text = "Detalhes da encomenda"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'txtId
         '
         Me.txtId.AutoSize = True
         Me.txtId.Location = New System.Drawing.Point(63, 356)
         Me.txtId.Name = "txtId"
-        Me.txtId.Size = New System.Drawing.Size(61, 20)
+        Me.txtId.Size = New System.Drawing.Size(0, 20)
         Me.txtId.TabIndex = 28
-        Me.txtId.Text = "Label14"
         Me.txtId.Visible = False
         '
         'txtNifForne
@@ -320,16 +278,6 @@ Partial Class Encomendas
         Me.Label13.Size = New System.Drawing.Size(96, 19)
         Me.Label13.TabIndex = 23
         Me.Label13.Text = "Data Entrega"
-        '
-        'delbtn
-        '
-        Me.delbtn.Location = New System.Drawing.Point(226, 404)
-        Me.delbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.delbtn.Name = "delbtn"
-        Me.delbtn.Size = New System.Drawing.Size(86, 31)
-        Me.delbtn.TabIndex = 11
-        Me.delbtn.Text = "Delete"
-        Me.delbtn.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -407,15 +355,10 @@ Partial Class Encomendas
     Friend WithEvents Label3 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents cancelbtn As Button
-    Friend WithEvents editbtn As Button
-    Friend WithEvents Addbtn As Button
-    Friend WithEvents okbtn As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Funcionalidades As GroupBox
-    Friend WithEvents delbtn As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents txtDataEntrega As TextBox
     Friend WithEvents Label13 As Label
@@ -427,4 +370,5 @@ Partial Class Encomendas
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
+    Friend WithEvents Button1 As Button
 End Class

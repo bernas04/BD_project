@@ -1,10 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="AllEvents.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Clientes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Compras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DetalhesCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DetalhesEnomendas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Encomendas.vb">
@@ -26,6 +35,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="NaoClientesvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Participants.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Produto.vb">

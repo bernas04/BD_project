@@ -20,6 +20,7 @@ Public Class Fornecedor
         CN.Open()
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
+        LockControls()
         ListBox1.Items.Clear()
         While RDR.Read
             Dim C As New FornecedorC
@@ -67,25 +68,6 @@ Public Class Fornecedor
         Dim idx As Integer = ListBox1.FindString(txtNif.Text)
         ListBox1.SelectedIndex = idx
         ShowButtons()
-    End Sub
-
-    Private Sub bttnDelete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles delbtn.Click
-        If ListBox1.SelectedIndex > -1 Then
-            Try
-                RemoveContact(CType(ListBox1.SelectedItem, FornecedorC).Nif)
-            Catch ex As Exception
-                MsgBox(ex.Message)
-                Exit Sub
-            End Try
-            ListBox1.Items.RemoveAt(ListBox1.SelectedIndex)
-            If currentContact = ListBox1.Items.Count Then currentContact = ListBox1.Items.Count - 1
-            If currentContact = -1 Then
-                ClearFields()
-                MsgBox("There are no more contacts")
-            Else
-                ShowFornecedor()
-            End If
-        End If
     End Sub
 
     Private Sub bttnAdd_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Addbtn.Click
@@ -138,6 +120,9 @@ Public Class Fornecedor
         End If
         adding = False
         HideButtons()
+
+        txtNif.ReadOnly = True
+        txtName.ReadOnly = True
         ListBox1.Enabled = False
     End Sub
 
@@ -153,20 +138,17 @@ Public Class Fornecedor
         txtNif.ReadOnly = True
         txtName.ReadOnly = True
         txtMorada.ReadOnly = True
-
     End Sub
 
     Sub UnlockControls()
         txtMorada.ReadOnly = False
         txtName.ReadOnly = False
         txtNif.ReadOnly = False
-
     End Sub
 
     Sub ShowButtons()
         LockControls()
         Addbtn.Visible = True
-        delbtn.Visible = True
         editbtn.Visible = True
         okbtn.Visible = False
         cancelbtn.Visible = False
@@ -184,7 +166,6 @@ Public Class Fornecedor
     Sub HideButtons()
         UnlockControls()
         Addbtn.Visible = False
-        delbtn.Visible = False
         editbtn.Visible = False
         okbtn.Visible = True
         cancelbtn.Visible = True

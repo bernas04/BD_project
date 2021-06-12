@@ -14,9 +14,12 @@ Public Class Eventos
                                "password = P52021bd")
 
         CMD = New SqlCommand
+        txtCodSec.Text = Label10.Text
         CMD.Connection = CN
-        CMD.CommandText = "SELECT * FROM proj.Evento"
+        CMD.CommandText = "SELECT * FROM proj.Evento where secçao_codigo = " & Label10.Text
         CN.Open()
+        txtCodSec.ReadOnly = True
+
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
         ListBox1.Items.Clear()
@@ -53,15 +56,7 @@ Public Class Eventos
             e.Handled = True
         End If
     End Sub
-    Private Sub DateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles txtData.ValueChanged
-        txtHora.Text = txtData.Value().ToLongTimeString
-        Dim data1 = txtData.Value()
-        Dim data2 = DateTime.Now
-        If DateTime.Compare(data1, data2) = -1 Then
-            MsgBox("Não pode agendar um evento para uma data anterior à data atual", 48)
-            txtData.Value = DateTime.Today.AddDays(1)
-        End If
-    End Sub
+
 
     Private Sub cancelbtn_Click(sender As Object, e As EventArgs) Handles cancelbtn.Click
         ListBox1.Enabled = True
@@ -86,8 +81,6 @@ Public Class Eventos
         txtHora.Text = ""
         txtVagas.Text = ""
         txtCusto.Text = ""
-        txtCodSec.Text = ""
-        Label10.Text = ""
     End Sub
 
     Sub LockControls()
@@ -95,13 +88,11 @@ Public Class Eventos
         txtHora.ReadOnly = True
         txtVagas.ReadOnly = True
         txtCusto.ReadOnly = True
-        txtCodSec.ReadOnly = True
     End Sub
 
     Sub ShowButtons()
         LockControls()
         Addbtn.Visible = True
-        delbtn.Visible = True
         editbtn.Visible = True
         okbtn.Visible = False
         cancelbtn.Visible = False
@@ -122,12 +113,12 @@ Public Class Eventos
     Private Function SaveEvento() As Boolean
         Dim contact As New EventosC
         Try
-            contact.Hora = txtHora.ToString
+            contact.Hora = txtHora.Text
             contact.Data = txtData.Text
             contact.Custo = txtCusto.Text
             contact.Nvagas = txtVagas.Text.ToString
-            contact.CodSec = txtCodSec.Text
-            'contact.Id = Label10.Text
+            contact.CodSec = Label10.Text
+
         Catch ex As Exception
             MsgBox(ex.Message)
             Return False
@@ -148,7 +139,10 @@ Public Class Eventos
                           "VALUES (@datas, @hora, @n_vagas, @custo, @secçao_codigo) "
 
         CMD.Parameters.Clear()
-        CMD.Parameters.AddWithValue("@datas", C.Data)
+        Dim iDate As String = C.Data
+        Dim oDate As DateTime = Convert.ToDateTime(iDate) 'Funciona
+
+        CMD.Parameters.AddWithValue("@datas", oDate)
         CMD.Parameters.AddWithValue("@hora", C.Hora)
         CMD.Parameters.AddWithValue("@secçao_codigo", C.CodSec)
         CMD.Parameters.AddWithValue("@n_vagas", C.Nvagas)
@@ -167,58 +161,26 @@ Public Class Eventos
 
     Private Sub UpdateContact(ByVal C As EventosC)  'TODO: alterar aqui ter atenção as virgulas'
         CMD.CommandText = "UPDATE proj.Evento " &
-            "SET Morada = @Morada, " &
-            "    Nome = @Name " &
+            "SET hora = @hora, " &
+            "    datas = @datas " &
             "WHERE id=@id"
         CMD.Parameters.Clear()
-        CMD.Parameters.AddWithValue("@datas", C.Data)
+        Dim iDate As String = C.Data
+        Dim oDate As DateTime = Convert.ToDateTime(iDate) 'Funciona
+        CMD.Parameters.AddWithValue("@datas", oDate)
         CMD.Parameters.AddWithValue("@hora", C.Hora)
-        CMD.Parameters.AddWithValue("@n_vagas", C.Nvagas)
-        CMD.Parameters.AddWithValue("@custo", C.Custo)
-        CMD.Parameters.AddWithValue("@secçao_codigo", C.CodSec)
         CMD.Parameters.AddWithValue("@id", C.Id)
         CN.Open()
         Try
             CMD.ExecuteNonQuery()
         Catch ex As Exception
-            Throw New Exception("2Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
+            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
             CN.Close()
         End Try
     End Sub
 
-    Private Sub RemoveContact(ByVal Id As String)
-        CMD.CommandText = "DELETE proj.Evento WHERE id=@ID "
-        CMD.Parameters.Clear()
-        CMD.Parameters.AddWithValue("@ID", Id) 'ver esta situação'
-        CN.Open()
-        Try
-            CMD.ExecuteNonQuery()
-        Catch ex As Exception
-            Throw New Exception("Failed to delete contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
-        Finally
-            CN.Close()
-        End Try
-    End Sub
 
-    Private Sub delbtn_Click(sender As Object, e As EventArgs) Handles delbtn.Click
-        If ListBox1.SelectedIndex > -1 Then
-            Try
-                RemoveContact(CType(ListBox1.SelectedItem, EventosC).Id) 'ver aqui
-            Catch ex As Exception
-                MsgBox(ex.Message)
-                Exit Sub
-            End Try
-            ListBox1.Items.RemoveAt(ListBox1.SelectedIndex)
-            If currentContact = ListBox1.Items.Count Then currentContact = ListBox1.Items.Count - 1
-            If currentContact = -1 Then
-                ClearFields()
-                MsgBox("There are no more contacts")
-            Else
-                ShowEventos()
-            End If
-        End If
-    End Sub
 
     Private Sub Addbtn_Click(sender As Object, e As EventArgs) Handles Addbtn.Click
         adding = True
@@ -230,7 +192,6 @@ Public Class Eventos
     Sub HideButtons()
         UnlockControls()
         Addbtn.Visible = False
-        delbtn.Visible = False
         editbtn.Visible = False
         okbtn.Visible = True
         cancelbtn.Visible = True
@@ -241,7 +202,6 @@ Public Class Eventos
         txtHora.ReadOnly = False
         txtVagas.ReadOnly = False
         txtCusto.ReadOnly = False
-        txtCodSec.ReadOnly = False
     End Sub
 
     Private Sub editbtn_Click(sender As Object, e As EventArgs) Handles editbtn.Click
@@ -252,8 +212,9 @@ Public Class Eventos
         End If
         adding = False
         HideButtons()
+        txtCusto.ReadOnly = True
+        txtVagas.ReadOnly = True
         ListBox1.Enabled = False
     End Sub
-
 
 End Class
