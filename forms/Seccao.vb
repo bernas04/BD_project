@@ -20,6 +20,8 @@ Public Class Seccao
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
         Button1.Visible = False
+        Button2.Visible = False
+        Button3.Visible = False
         LockControls()
         ListBox1.Items.Clear()
         While RDR.Read
@@ -45,11 +47,15 @@ Public Class Seccao
         txtMorada.Text = contact.ID
         txtCodigo.Text = contact.Codigo
         Eventos.Label10.Text = contact.Codigo
+        Funcionariosecçao.txtSeccao.Text = contact.Codigo
+        Produtosecçao.txtCodSec.Text = contact.Codigo
     End Sub
 
     Private Sub bttnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancelbtn2.Click
         ListBox1.Enabled = True
         Button1.Visible = True
+        Button2.Visible = True
+        Button3.Visible = True
         If ListBox1.Items.Count > 0 Then
             currentContact = ListBox1.SelectedIndex
             If currentContact < 0 Then currentContact = 0
@@ -63,6 +69,8 @@ Public Class Seccao
 
     Private Sub bttnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles okbtn2.Click
         Button1.Visible = True
+        Button2.Visible = True
+        Button3.Visible = True
         Try
             SaveFornecedor()
         Catch ex As Exception
@@ -76,6 +84,8 @@ Public Class Seccao
 
     Private Sub bttnAdd_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles addbtn2.Click
         Button1.Visible = False
+        Button2.Visible = False
+        Button3.Visible = False
         adding = True
         ClearFields()
         HideButtons()
@@ -123,6 +133,8 @@ Public Class Seccao
         If ListBox1.SelectedIndex > -1 Then
             currentContact = ListBox1.SelectedIndex
             Button1.Visible = True
+            Button2.Visible = True
+            Button3.Visible = True
             ShowFornecedor()
         End If
     End Sub
@@ -182,5 +194,13 @@ Public Class Seccao
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Eventos.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Funcionariosecçao.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Produtosecçao.Show()
     End Sub
 End Class

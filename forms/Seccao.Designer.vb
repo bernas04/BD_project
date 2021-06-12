@@ -28,6 +28,8 @@ Partial Class Seccao
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Funcionalidades = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtCodigo = New System.Windows.Forms.Label()
         Me.cancelbtn2 = New System.Windows.Forms.Button()
@@ -122,6 +124,8 @@ Partial Class Seccao
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.txtCodigo)
         Me.GroupBox1.Controls.Add(Me.cancelbtn2)
@@ -140,12 +144,32 @@ Partial Class Seccao
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(272, 454)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(86, 31)
+        Me.Button3.TabIndex = 17
+        Me.Button3.Text = "Produtos"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(139, 454)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(100, 31)
+        Me.Button2.TabIndex = 16
+        Me.Button2.Text = "Funcionarios"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(75, 459)
+        Me.Button1.Location = New System.Drawing.Point(7, 454)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(212, 31)
+        Me.Button1.Size = New System.Drawing.Size(86, 31)
         Me.Button1.TabIndex = 15
         Me.Button1.Text = "Eventos"
         Me.Button1.UseVisualStyleBackColor = True
@@ -402,4 +426,6 @@ Partial Class Seccao
     Friend WithEvents txtCodigo As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents cancelbtn2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button2 As Button
 End Class

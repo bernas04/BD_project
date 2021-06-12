@@ -207,3 +207,6 @@ C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\fo
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.AllEvents.resources
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Participants.resources
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.DetalhesEnomendas.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Funcionarioseccao.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Produtosecçao.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Funcionariosecçao.resources
