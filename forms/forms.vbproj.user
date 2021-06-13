@@ -4,6 +4,9 @@
     <Compile Update="AllEvents.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ClienteInscreveEvento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Clientes.vb">
       <SubType>Form</SubType>
     </Compile>
