@@ -28,12 +28,18 @@ Partial Class NaoClientesvb
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Funcionalidades = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.txtTelefone = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtGenero = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.cancelbtn = New System.Windows.Forms.Button()
         Me.editbtn = New System.Windows.Forms.Button()
-        Me.delbtn = New System.Windows.Forms.Button()
         Me.Addbtn = New System.Windows.Forms.Button()
         Me.okbtn = New System.Windows.Forms.Button()
-        Me.txtMorada = New System.Windows.Forms.TextBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.txtNif = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -41,7 +47,7 @@ Partial Class NaoClientesvb
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.Funcionalidades.SuspendLayout()
         Me.SuspendLayout()
@@ -94,33 +100,96 @@ Partial Class NaoClientesvb
         Me.ListBox1.ItemHeight = 15
         Me.ListBox1.Location = New System.Drawing.Point(33, 0)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(375, 379)
+        Me.ListBox1.Size = New System.Drawing.Size(391, 379)
         Me.ListBox1.TabIndex = 0
         '
         'Funcionalidades
         '
+        Me.Funcionalidades.Controls.Add(Me.Button2)
+        Me.Funcionalidades.Controls.Add(Me.DateTimePicker1)
+        Me.Funcionalidades.Controls.Add(Me.txtTelefone)
+        Me.Funcionalidades.Controls.Add(Me.Label11)
+        Me.Funcionalidades.Controls.Add(Me.Label10)
+        Me.Funcionalidades.Controls.Add(Me.txtGenero)
+        Me.Funcionalidades.Controls.Add(Me.Label9)
         Me.Funcionalidades.Controls.Add(Me.Button1)
         Me.Funcionalidades.Controls.Add(Me.cancelbtn)
         Me.Funcionalidades.Controls.Add(Me.editbtn)
-        Me.Funcionalidades.Controls.Add(Me.delbtn)
         Me.Funcionalidades.Controls.Add(Me.Addbtn)
         Me.Funcionalidades.Controls.Add(Me.okbtn)
-        Me.Funcionalidades.Controls.Add(Me.txtMorada)
+        Me.Funcionalidades.Controls.Add(Me.txtEmail)
         Me.Funcionalidades.Controls.Add(Me.txtNif)
         Me.Funcionalidades.Controls.Add(Me.txtName)
         Me.Funcionalidades.Controls.Add(Me.Label5)
         Me.Funcionalidades.Controls.Add(Me.Label4)
         Me.Funcionalidades.Controls.Add(Me.Label3)
         Me.Funcionalidades.Controls.Add(Me.Label2)
-        Me.Funcionalidades.Location = New System.Drawing.Point(12, 30)
+        Me.Funcionalidades.Location = New System.Drawing.Point(12, 12)
         Me.Funcionalidades.Name = "Funcionalidades"
-        Me.Funcionalidades.Size = New System.Drawing.Size(313, 406)
+        Me.Funcionalidades.Size = New System.Drawing.Size(379, 427)
         Me.Funcionalidades.TabIndex = 7
         Me.Funcionalidades.TabStop = False
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(113, 226)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
+        Me.DateTimePicker1.TabIndex = 19
+        '
+        'txtTelefone
+        '
+        Me.txtTelefone.Location = New System.Drawing.Point(66, 269)
+        Me.txtTelefone.Name = "txtTelefone"
+        Me.txtTelefone.Size = New System.Drawing.Size(185, 23)
+        Me.txtTelefone.TabIndex = 12
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(4, 277)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(51, 15)
+        Me.Label11.TabIndex = 18
+        Me.Label11.Text = "Telefone"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(4, 226)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(98, 15)
+        Me.Label10.TabIndex = 17
+        Me.Label10.Text = "Data Nascimento"
+        '
+        'txtGenero
+        '
+        Me.txtGenero.Location = New System.Drawing.Point(66, 179)
+        Me.txtGenero.Name = "txtGenero"
+        Me.txtGenero.Size = New System.Drawing.Size(207, 23)
+        Me.txtGenero.TabIndex = 16
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 182)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(45, 15)
+        Me.Label9.TabIndex = 15
+        Me.Label9.Text = "Género"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(66, 374)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(193, 23)
+        Me.Button1.TabIndex = 14
+        Me.Button1.Text = "Inscrever evento/Meus eventos"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'cancelbtn
         '
-        Me.cancelbtn.Location = New System.Drawing.Point(66, 303)
+        Me.cancelbtn.Location = New System.Drawing.Point(69, 333)
         Me.cancelbtn.Name = "cancelbtn"
         Me.cancelbtn.Size = New System.Drawing.Size(75, 23)
         Me.cancelbtn.TabIndex = 13
@@ -130,25 +199,16 @@ Partial Class NaoClientesvb
         '
         'editbtn
         '
-        Me.editbtn.Location = New System.Drawing.Point(112, 303)
+        Me.editbtn.Location = New System.Drawing.Point(130, 333)
         Me.editbtn.Name = "editbtn"
         Me.editbtn.Size = New System.Drawing.Size(75, 23)
         Me.editbtn.TabIndex = 12
         Me.editbtn.Text = "Edit"
         Me.editbtn.UseVisualStyleBackColor = True
         '
-        'delbtn
-        '
-        Me.delbtn.Location = New System.Drawing.Point(198, 303)
-        Me.delbtn.Name = "delbtn"
-        Me.delbtn.Size = New System.Drawing.Size(75, 23)
-        Me.delbtn.TabIndex = 11
-        Me.delbtn.Text = "Delete"
-        Me.delbtn.UseVisualStyleBackColor = True
-        '
         'Addbtn
         '
-        Me.Addbtn.Location = New System.Drawing.Point(31, 303)
+        Me.Addbtn.Location = New System.Drawing.Point(15, 333)
         Me.Addbtn.Name = "Addbtn"
         Me.Addbtn.Size = New System.Drawing.Size(75, 23)
         Me.Addbtn.TabIndex = 10
@@ -157,7 +217,7 @@ Partial Class NaoClientesvb
         '
         'okbtn
         '
-        Me.okbtn.Location = New System.Drawing.Point(176, 303)
+        Me.okbtn.Location = New System.Drawing.Point(191, 333)
         Me.okbtn.Name = "okbtn"
         Me.okbtn.Size = New System.Drawing.Size(75, 23)
         Me.okbtn.TabIndex = 8
@@ -165,12 +225,12 @@ Partial Class NaoClientesvb
         Me.okbtn.UseVisualStyleBackColor = True
         Me.okbtn.Visible = False
         '
-        'txtMorada
+        'txtEmail
         '
-        Me.txtMorada.Location = New System.Drawing.Point(66, 133)
-        Me.txtMorada.Name = "txtMorada"
-        Me.txtMorada.Size = New System.Drawing.Size(207, 23)
-        Me.txtMorada.TabIndex = 6
+        Me.txtEmail.Location = New System.Drawing.Point(66, 133)
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(207, 23)
+        Me.txtEmail.TabIndex = 6
         '
         'txtNif
         '
@@ -200,9 +260,9 @@ Partial Class NaoClientesvb
         Me.Label4.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(6, 136)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 15)
+        Me.Label4.Size = New System.Drawing.Size(35, 15)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Morada"
+        Me.Label4.Text = "Email"
         '
         'Label3
         '
@@ -232,14 +292,14 @@ Partial Class NaoClientesvb
         Me.Label1.Size = New System.Drawing.Size(0, 15)
         Me.Label1.TabIndex = 6
         '
-        'Button1
+        'Button2
         '
-        Me.Button1.Location = New System.Drawing.Point(47, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(124, 23)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Inscrever evento"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button2.Location = New System.Drawing.Point(73, 403)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(178, 23)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "Faz a tua primeira compra"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'NaoClientesvb
         '
@@ -270,10 +330,9 @@ Partial Class NaoClientesvb
     Friend WithEvents Funcionalidades As GroupBox
     Friend WithEvents cancelbtn As Button
     Friend WithEvents editbtn As Button
-    Friend WithEvents delbtn As Button
     Friend WithEvents Addbtn As Button
     Friend WithEvents okbtn As Button
-    Friend WithEvents txtMorada As TextBox
+    Friend WithEvents txtEmail As TextBox
     Friend WithEvents txtNif As TextBox
     Friend WithEvents txtName As TextBox
     Friend WithEvents Label5 As Label
@@ -282,4 +341,11 @@ Partial Class NaoClientesvb
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents txtGenero As TextBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents txtTelefone As TextBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents Button2 As Button
 End Class
