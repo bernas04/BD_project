@@ -43,6 +43,9 @@
     <Compile Update="NaoClientesvb.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="NClienteInscreveEvento.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Participants.vb">
       <SubType>Form</SubType>
     </Compile>

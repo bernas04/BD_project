@@ -16,6 +16,7 @@ Public Class NaoClientesvb
         CMD.CommandText = "SELECT * FROM proj.N_ClientesEvento" & "(" & ")"
         CN.Open()
         Button1.Visible = False
+        Button2.Visible = False
         txtNif.ReadOnly = True
         txtName.ReadOnly = True
         txtEmail.ReadOnly = True
@@ -53,10 +54,12 @@ Public Class NaoClientesvb
         txtGenero.Text = contact.Genero
         txtEmail.Text = contact.Email
         DateTimePicker1.Text = contact.Data
+        NClienteInscreveEvento.txtNifnCliente.Text = txtNif.Text
     End Sub
     Private Sub bttnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancelbtn.Click
         ListBox1.Enabled = True
         Button1.Visible = True
+        Button2.Visible = True
         If ListBox1.Items.Count > 0 Then
             currentContact = ListBox1.SelectedIndex
             If currentContact < 0 Then currentContact = 0
@@ -71,6 +74,7 @@ Public Class NaoClientesvb
     Private Sub bttnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles okbtn.Click
         Try
             Button1.Visible = True
+            Button2.Visible = True
             SaveFornecedor()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -85,6 +89,7 @@ Public Class NaoClientesvb
 
     Private Sub bttnAdd_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Addbtn.Click
         Button1.Visible = False
+        Button2.Visible = False
         adding = True
         ClearFields()
         HideButtons()
@@ -135,7 +140,8 @@ Public Class NaoClientesvb
             MsgBox("Please select a contact to edit")
             Exit Sub
         End If
-        Button1.Visible = True
+        Button1.Visible = False
+        Button2.Visible = False
         adding = False
         HideButtonsEdit()
         ListBox1.Enabled = False
@@ -148,6 +154,8 @@ Public Class NaoClientesvb
             DateTimePicker1.Enabled = True
             ShowFornecedor()
         End If
+        Button1.Visible = True
+        Button2.Visible = True
     End Sub
 
     ' Helper routines
@@ -261,6 +269,7 @@ Public Class NaoClientesvb
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+        NClienteInscreveEvento.Show()
     End Sub
+
 End Class

@@ -45,6 +45,7 @@ Public Class Clientes
         txtEmail.Text = contact.Email
         txtGenero.Text = contact.Genero
         txtId.Text = contact.Id
+        ClienteInscreveEvento.nifCliente.Text = contact.Id
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -179,7 +180,17 @@ Public Class Clientes
     End Sub
 
     Private Sub ButtonInscreve_Click(sender As Object, e As EventArgs) Handles ButtonInscreve.Click
-        ClienteInscreveEvento.nifCliente.Text = txtNif.Text
+        If currentContact < 0 Then
+            MsgBox("Please select a contact!")
+            Exit Sub
+        End If
         ClienteInscreveEvento.Show()
+    End Sub
+
+    Private Sub ButtonCompra_Click(sender As Object, e As EventArgs) Handles ButtonCompra.Click
+        If currentContact < 0 Then
+            MsgBox("Please select a contact!")
+            Exit Sub
+        End If
     End Sub
 End Class

@@ -1,4 +1,4 @@
-﻿Public Class ClienteInscreveEventoc
+﻿Public Class NClienteInscreveEventoC
     Private _numEvento As String
     Private _hora As String
     Private _data As String
@@ -54,5 +54,4 @@
         Me.Data = data
         Me.Vagas = vagas
     End Sub
-
 End Class

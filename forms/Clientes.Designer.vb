@@ -48,6 +48,9 @@ Partial Class Clientes
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.Funcionalidades.SuspendLayout()
         Me.SuspendLayout()
@@ -56,17 +59,17 @@ Partial Class Clientes
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(630, 9)
+        Me.Label8.Location = New System.Drawing.Point(704, 8)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(87, 27)
+        Me.Label8.Size = New System.Drawing.Size(50, 27)
         Me.Label8.TabIndex = 17
-        Me.Label8.Text = "Morada"
+        Me.Label8.Text = "NIF"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(536, 9)
+        Me.Label7.Location = New System.Drawing.Point(511, 9)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 27)
         Me.Label7.TabIndex = 16
@@ -78,9 +81,9 @@ Partial Class Clientes
         Me.Label6.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label6.Location = New System.Drawing.Point(454, 8)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(50, 27)
+        Me.Label6.Size = New System.Drawing.Size(37, 27)
         Me.Label6.TabIndex = 15
-        Me.Label6.Text = "NIF"
+        Me.Label6.Text = "ID"
         '
         'GroupBox2
         '
@@ -90,7 +93,7 @@ Partial Class Clientes
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.GroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.GroupBox2.Size = New System.Drawing.Size(759, 553)
+        Me.GroupBox2.Size = New System.Drawing.Size(927, 553)
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         '
@@ -100,10 +103,10 @@ Partial Class Clientes
         Me.ListBox1.ForeColor = System.Drawing.Color.Black
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.ItemHeight = 20
-        Me.ListBox1.Location = New System.Drawing.Point(38, 0)
+        Me.ListBox1.Location = New System.Drawing.Point(19, 19)
         Me.ListBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(715, 504)
+        Me.ListBox1.Size = New System.Drawing.Size(883, 504)
         Me.ListBox1.TabIndex = 0
         '
         'Funcionalidades
@@ -320,11 +323,44 @@ Partial Class Clientes
         Me.Label1.Size = New System.Drawing.Size(0, 20)
         Me.Label1.TabIndex = 12
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label12.Location = New System.Drawing.Point(778, 9)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(111, 27)
+        Me.Label12.TabIndex = 18
+        Me.Label12.Text = "Telemóvel"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label13.Location = New System.Drawing.Point(913, 9)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(178, 27)
+        Me.Label13.TabIndex = 19
+        Me.Label13.Text = "Data Nascimento"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label14.Location = New System.Drawing.Point(1125, 9)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(68, 27)
+        Me.Label14.TabIndex = 20
+        Me.Label14.Text = "Email"
+        '
         'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1198, 600)
+        Me.ClientSize = New System.Drawing.Size(1395, 600)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -368,4 +404,7 @@ Partial Class Clientes
     Friend WithEvents txtDataNascimento As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents txtId As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
 End Class
