@@ -31,6 +31,7 @@ Partial Class ClienteInscreveEvento
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.txtVagas = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ListBox1
@@ -68,7 +69,6 @@ Partial Class ClienteInscreveEvento
         Me.nifCliente.Name = "nifCliente"
         Me.nifCliente.Size = New System.Drawing.Size(0, 20)
         Me.nifCliente.TabIndex = 4
-        Me.nifCliente.Visible = False
         '
         'idEvento
         '
@@ -77,7 +77,6 @@ Partial Class ClienteInscreveEvento
         Me.idEvento.Name = "idEvento"
         Me.idEvento.Size = New System.Drawing.Size(0, 20)
         Me.idEvento.TabIndex = 5
-        Me.idEvento.Visible = False
         '
         'Label2
         '
@@ -119,11 +118,21 @@ Partial Class ClienteInscreveEvento
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Vagas"
         '
+        'txtVagas
+        '
+        Me.txtVagas.AutoSize = True
+        Me.txtVagas.Location = New System.Drawing.Point(862, 48)
+        Me.txtVagas.Name = "txtVagas"
+        Me.txtVagas.Size = New System.Drawing.Size(53, 20)
+        Me.txtVagas.TabIndex = 10
+        Me.txtVagas.Text = "Label6"
+        '
         'ClienteInscreveEvento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1122, 527)
+        Me.Controls.Add(Me.txtVagas)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -149,4 +158,5 @@ Partial Class ClienteInscreveEvento
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents txtVagas As Label
 End Class

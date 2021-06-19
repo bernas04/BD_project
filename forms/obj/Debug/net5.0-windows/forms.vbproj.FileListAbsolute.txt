@@ -220,3 +220,5 @@ C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Participants.reso
 C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Produtosecçao.resources
 C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.PáginaFuncionario.resources
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.NClienteInscreveEvento.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Login.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Register.resources

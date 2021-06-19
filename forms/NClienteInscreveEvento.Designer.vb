@@ -30,6 +30,8 @@ Partial Class NClienteInscreveEvento
         Me.Label5 = New System.Windows.Forms.Label()
         Me.ButtonOkInscreve = New System.Windows.Forms.Button()
         Me.txtNifnCliente = New System.Windows.Forms.Label()
+        Me.idEvento = New System.Windows.Forms.Label()
+        Me.nVagas = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ListBox1
@@ -108,12 +110,35 @@ Partial Class NClienteInscreveEvento
         Me.txtNifnCliente.Size = New System.Drawing.Size(53, 20)
         Me.txtNifnCliente.TabIndex = 12
         Me.txtNifnCliente.Text = "Label6"
+        Me.txtNifnCliente.Visible = False
+        '
+        'idEvento
+        '
+        Me.idEvento.AutoSize = True
+        Me.idEvento.Location = New System.Drawing.Point(909, 59)
+        Me.idEvento.Name = "idEvento"
+        Me.idEvento.Size = New System.Drawing.Size(53, 20)
+        Me.idEvento.TabIndex = 13
+        Me.idEvento.Text = "Label6"
+        Me.idEvento.Visible = False
+        '
+        'nVagas
+        '
+        Me.nVagas.AutoSize = True
+        Me.nVagas.Location = New System.Drawing.Point(1039, 57)
+        Me.nVagas.Name = "nVagas"
+        Me.nVagas.Size = New System.Drawing.Size(53, 20)
+        Me.nVagas.TabIndex = 14
+        Me.nVagas.Text = "Label7"
+        Me.nVagas.Visible = False
         '
         'NClienteInscreveEvento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1229, 538)
+        Me.Controls.Add(Me.nVagas)
+        Me.Controls.Add(Me.idEvento)
         Me.Controls.Add(Me.txtNifnCliente)
         Me.Controls.Add(Me.ButtonOkInscreve)
         Me.Controls.Add(Me.Label5)
@@ -137,4 +162,6 @@ Partial Class NClienteInscreveEvento
     Friend WithEvents Label5 As Label
     Friend WithEvents ButtonOkInscreve As Button
     Friend WithEvents txtNifnCliente As Label
+    Friend WithEvents idEvento As Label
+    Friend WithEvents nVagas As Label
 End Class

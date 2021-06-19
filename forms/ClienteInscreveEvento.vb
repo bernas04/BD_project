@@ -38,6 +38,10 @@ Public Class ClienteInscreveEvento
         Dim contact As New ClienteInscreveEventoc
         contact = CType(ListBox1.Items.Item(currentContact), ClienteInscreveEventoc)
         idEvento.Text = contact.numEvento
+        If (contact.Vagas = "") Then
+            contact.Vagas = 1000
+        End If
+        txtVagas.Text = contact.Vagas
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -45,5 +49,30 @@ Public Class ClienteInscreveEvento
             currentContact = ListBox1.SelectedIndex
         End If
         ShowEventos()
+    End Sub
+
+    Private Sub ButtonOkInscreve_Click(sender As Object, e As EventArgs) Handles ButtonOkInscreve.Click
+        SubmitContact()
+        ListBox1.SelectedIndex = -1
+        Close()
+    End Sub
+
+    Private Sub SubmitContact()
+        CMD.CommandText = "proj.ClienteFazerInscricao"
+        CMD.CommandType = CommandType.StoredProcedure
+        CMD.Parameters.Clear()
+        CMD.Parameters.Add("@nif", SqlDbType.Char, 9).Value = nifCliente.Text
+        CMD.Parameters.Add("@id", SqlDbType.Int).Value = idEvento.Text
+        CMD.Parameters.Add("@vagas", SqlDbType.Int).Value = txtVagas.Text
+        CN.Open()
+        Try
+            CMD.ExecuteNonQuery()
+            MsgBox("Cliente Inscrito com sucesso")
+        Catch ex As Exception
+            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
+        Finally
+            CN.Close()
+        End Try
+        CN.Close()
     End Sub
 End Class

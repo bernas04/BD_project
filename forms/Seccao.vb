@@ -194,13 +194,25 @@ Public Class Seccao
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Eventos.Show()
+        ListBox1.SelectedIndex = -1
+        Button1.Visible = False
+        Button2.Visible = False
+        Button3.Visible = False
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Funcionariosecçao.Show()
+        ListBox1.SelectedIndex = -1
+        Button1.Visible = False
+        Button2.Visible = False
+        Button3.Visible = False
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Produtosecçao.Show()
+        ListBox1.SelectedIndex = -1
+        Button1.Visible = False
+        Button2.Visible = False
+        Button3.Visible = False
     End Sub
 End Class

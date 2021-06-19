@@ -19,7 +19,6 @@ Public Class Eventos
         CMD.CommandText = "SELECT * FROM proj.Evento where secçao_codigo = " & Label10.Text
         CN.Open()
         txtCodSec.ReadOnly = True
-
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
         ListBox1.Items.Clear()
@@ -216,5 +215,6 @@ Public Class Eventos
         txtVagas.ReadOnly = True
         ListBox1.Enabled = False
     End Sub
+
 
 End Class

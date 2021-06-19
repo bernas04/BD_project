@@ -40,6 +40,9 @@
     <Compile Update="GestaoPes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="NaoClientesvb.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +62,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PáginaFuncionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Register.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Seccao.vb">

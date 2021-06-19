@@ -185,6 +185,7 @@ Public Class Clientes
             Exit Sub
         End If
         ClienteInscreveEvento.Show()
+        ListBox1.SelectedIndex = -1
     End Sub
 
     Private Sub ButtonCompra_Click(sender As Object, e As EventArgs) Handles ButtonCompra.Click

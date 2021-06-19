@@ -6,7 +6,6 @@ Public Class NClienteInscreveEvento
     Dim CMD As SqlCommand
     Dim currentContact As Integer
     Dim adding As Boolean
-
     Private Sub NClienteInscreveEvento_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CN = New SqlConnection("data source=tcp:mednat.ieeta.pt\SQLSERVER,8101;" &
                                "Initial Catalog = p5g2; uid = p5g2;" &
@@ -20,7 +19,7 @@ Public Class NClienteInscreveEvento
         RDR = CMD.ExecuteReader
         ListBox1.Items.Clear()
         While RDR.Read
-            Dim C As New ClienteInscreveEventoc
+            Dim C As New NClienteInscreveEventoC
             C.Data = RDR.Item("datas")
             C.Hora = RDR.Item("hora").ToString
             C.numEvento = RDR.Item("num_evento")
@@ -35,6 +34,11 @@ Public Class NClienteInscreveEvento
         If ListBox1.Items.Count = 0 Or currentContact < 0 Then Exit Sub
         Dim contact As New NClienteInscreveEventoC
         contact = CType(ListBox1.Items.Item(currentContact), NClienteInscreveEventoC)
+        idEvento.Text = contact.numEvento
+        If (contact.Vagas = "") Then
+            contact.Vagas = 1000
+        End If
+        nVagas.Text = contact.Vagas
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
@@ -42,5 +46,32 @@ Public Class NClienteInscreveEvento
             currentContact = ListBox1.SelectedIndex
         End If
         ShowEventos()
+    End Sub
+
+    Private Sub ButtonOkInscreve_Click(sender As Object, e As EventArgs) Handles ButtonOkInscreve.Click
+        SubmitContact()
+        ListBox1.SelectedIndex = -1
+        Close()
+
+    End Sub
+
+    Private Sub SubmitContact()
+        CMD.CommandText = "proj.NaoClienteFazerInscricao"
+        CMD.CommandType = CommandType.StoredProcedure
+        CMD.Parameters.Clear()
+        CMD.Parameters.Add("@nif", SqlDbType.Char, 9).Value = txtNifnCliente.Text
+        CMD.Parameters.Add("@id", SqlDbType.Int).Value = idEvento.Text
+        CMD.Parameters.Add("@vagas", SqlDbType.Int).Value = nVagas.Text
+
+        CN.Open()
+        Try
+            CMD.ExecuteNonQuery()
+            MsgBox("Inscrito com sucesso")
+        Catch ex As Exception
+            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
+        Finally
+            CN.Close()
+        End Try
+        CN.Close()
     End Sub
 End Class

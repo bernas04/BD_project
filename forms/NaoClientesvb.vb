@@ -269,7 +269,12 @@ Public Class NaoClientesvb
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If currentContact < 0 Then
+            MsgBox("Please select a contact!")
+            Exit Sub
+        End If
         NClienteInscreveEvento.Show()
+        ListBox1.SelectedIndex = -1
     End Sub
 
 End Class

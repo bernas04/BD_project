@@ -21,6 +21,7 @@ Public Class Encomendas
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
         ListBox1.Items.Clear()
+        Button1.Visible = False
         While RDR.Read
             Dim C As New EncomendasC
             C.Id = RDR.Item("id")
@@ -53,6 +54,7 @@ Public Class Encomendas
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
         If ListBox1.SelectedIndex > -1 Then
             currentContact = ListBox1.SelectedIndex
+            Button1.Visible = True
             ShowEncomendas()
         End If
     End Sub
@@ -148,6 +150,8 @@ Public Class Encomendas
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         DetalhesEnomendas.Show()
+        ListBox1.SelectedIndex = -1
+        Button1.Visible = False
     End Sub
 
 
