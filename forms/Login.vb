@@ -25,6 +25,7 @@ Public Class Login
         CMD.Parameters("@nif").Direction = ParameterDirection.Output
         CMD.Parameters.Add("@numero", SqlDbType.Int)
         CMD.Parameters("@numero").Direction = ParameterDirection.Output
+
         CN.Open()
         Try
             CMD.ExecuteNonQuery()
@@ -41,9 +42,17 @@ Public Class Login
             txtpass.Text = ""
         Else
             Dim nif As String = CMD.Parameters("@nif").Value
+            Dim number As Integer = CMD.Parameters("@numero").Value
+            Form1.txtNif.Text = nif
+            Form1.txt_ret.Text = str
+            Form1.txtId.Text = number
             Form1.Show()
+            txtmail.Text = ""
+            txtpass.Text = ""
         End If
     End Sub
 
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
 End Class

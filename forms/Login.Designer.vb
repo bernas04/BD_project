@@ -35,10 +35,10 @@ Partial Class Login
         '
         Me.txtEmail.AutoSize = True
         Me.txtEmail.BackColor = System.Drawing.SystemColors.Control
-        Me.txtEmail.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtEmail.Location = New System.Drawing.Point(155, 66)
+        Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtEmail.Location = New System.Drawing.Point(136, 50)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(63, 23)
+        Me.txtEmail.Size = New System.Drawing.Size(48, 20)
         Me.txtEmail.TabIndex = 0
         Me.txtEmail.Text = "Email"
         '
@@ -46,63 +46,66 @@ Partial Class Login
         '
         Me.txtPassword.AutoSize = True
         Me.txtPassword.BackColor = System.Drawing.SystemColors.Control
-        Me.txtPassword.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtPassword.Location = New System.Drawing.Point(111, 134)
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txtPassword.Location = New System.Drawing.Point(97, 100)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(107, 23)
+        Me.txtPassword.Size = New System.Drawing.Size(78, 20)
         Me.txtPassword.TabIndex = 1
         Me.txtPassword.Text = "Password"
         '
         'txtmail
         '
-        Me.txtmail.Location = New System.Drawing.Point(234, 66)
+        Me.txtmail.Location = New System.Drawing.Point(205, 50)
+        Me.txtmail.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtmail.Name = "txtmail"
         Me.txtmail.PlaceholderText = "exemple@exemple.com"
-        Me.txtmail.Size = New System.Drawing.Size(201, 27)
+        Me.txtmail.Size = New System.Drawing.Size(176, 23)
         Me.txtmail.TabIndex = 2
         '
         'txtpass
         '
-        Me.txtpass.Location = New System.Drawing.Point(234, 130)
+        Me.txtpass.Location = New System.Drawing.Point(205, 98)
+        Me.txtpass.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtpass.Name = "txtpass"
         Me.txtpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtpass.PlaceholderText = "Palavra-Passe"
-        Me.txtpass.Size = New System.Drawing.Size(201, 27)
+        Me.txtpass.Size = New System.Drawing.Size(176, 23)
         Me.txtpass.TabIndex = 3
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(164, 192)
+        Me.Label1.Location = New System.Drawing.Point(144, 144)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(0, 20)
+        Me.Label1.Size = New System.Drawing.Size(0, 15)
         Me.Label1.TabIndex = 5
         '
         'Registar
         '
         Me.Registar.AutoSize = True
         Me.Registar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Registar.Location = New System.Drawing.Point(82, 194)
+        Me.Registar.Location = New System.Drawing.Point(72, 146)
         Me.Registar.Name = "Registar"
-        Me.Registar.Size = New System.Drawing.Size(63, 20)
+        Me.Registar.Size = New System.Drawing.Size(49, 15)
         Me.Registar.TabIndex = 4
         Me.Registar.TabStop = True
         Me.Registar.Text = "Registar"
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(415, 198)
+        Me.Button1.Location = New System.Drawing.Point(363, 148)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 33)
+        Me.Button1.Size = New System.Drawing.Size(82, 25)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Login"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 243)
+        Me.ClientSize = New System.Drawing.Size(490, 182)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Registar)
@@ -110,6 +113,7 @@ Partial Class Login
         Me.Controls.Add(Me.txtmail)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtEmail)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Login"
         Me.Text = "Login"
         Me.ResumeLayout(False)

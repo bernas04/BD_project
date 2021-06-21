@@ -12,6 +12,7 @@
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        PáginaFuncionario.Label1.Text = Form1.txtId.Text
         PáginaFuncionario.Show()
     End Sub
 End Class

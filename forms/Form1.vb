@@ -57,7 +57,19 @@ Public Class Form1
         End While
         CN.Close()
 
-
+        If txt_ret.Text = "client" Then
+            PictureBox_Pessoal.Visible = False
+            Label_Pessoal.Visible = False
+            PictureBox_Fornecedor.Visible = False
+            Label_Fornecedor.Visible = False
+            PictureBox_Encomendas.Visible = False
+            Label_Encomendas.Visible = False
+            PictureBox_Seccao.Visible = False
+            Label_Seccaco.Visible = False
+            AllEvents.Button1.Visible = False
+            Produto.Addbtn.Visible = False
+            Produto.editbtn.Visible = False
+        End If
 
 
 
@@ -125,11 +137,8 @@ Public Class Form1
         Seccao.Show()
     End Sub
 
-    Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
-
-    End Sub
-
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles pesquisa.TextChanged
+        Dim txt As String = pesquisa.Text
 
     End Sub
 End Class
