@@ -18,11 +18,13 @@ Public Class Login
         CMD.Parameters.Clear()
         CMD.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = txtmail.Text
         CMD.Parameters.Add("@pass", SqlDbType.VarChar, 50).Value = txtpass.Text
+
         CMD.Parameters.Add("@ret", SqlDbType.VarChar, 50)
         CMD.Parameters("@ret").Direction = ParameterDirection.Output
         CMD.Parameters.Add("@nif", SqlDbType.VarChar, 9)
         CMD.Parameters("@nif").Direction = ParameterDirection.Output
-
+        CMD.Parameters.Add("@numero", SqlDbType.Int)
+        CMD.Parameters("@numero").Direction = ParameterDirection.Output
         CN.Open()
         Try
             CMD.ExecuteNonQuery()

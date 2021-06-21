@@ -36,7 +36,6 @@ Partial Class PáginaFuncionario
         Me.Label1.Size = New System.Drawing.Size(41, 15)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Label1"
-        Me.Label1.Visible = False
         '
         'Button1
         '
