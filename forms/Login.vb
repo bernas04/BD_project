@@ -16,17 +16,32 @@ Public Class Login
         CMD.CommandText = "proj.ValidaLogin"
         CMD.CommandType = CommandType.StoredProcedure
         CMD.Parameters.Clear()
-        CMD.Parameters.Add("@email", SqlDbType.VarChar).Value = txtEmail.Text
-        CMD.Parameters.Add("@pass", SqlDbType.VarChar).Value = txtpass.Text
+        CMD.Parameters.Add("@email", SqlDbType.VarChar, 50).Value = txtmail.Text
+        CMD.Parameters.Add("@pass", SqlDbType.VarChar, 50).Value = txtpass.Text
+        CMD.Parameters.Add("@ret", SqlDbType.VarChar, 50)
+        CMD.Parameters("@ret").Direction = ParameterDirection.Output
+        CMD.Parameters.Add("@nif", SqlDbType.VarChar, 9)
+        CMD.Parameters("@nif").Direction = ParameterDirection.Output
+
         CN.Open()
         Try
             CMD.ExecuteNonQuery()
-            Form1.Show()
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally
             CN.Close()
         End Try
         CN.Close()
+        Dim str As String = CMD.Parameters("@ret").Value
+        If (str = "error") Then
+            MsgBox("Dados Invalidos")
+            txtmail.Text = ""
+            txtpass.Text = ""
+        Else
+            Dim nif As String = CMD.Parameters("@nif").Value
+            Form1.Show()
+        End If
     End Sub
+
+
 End Class
