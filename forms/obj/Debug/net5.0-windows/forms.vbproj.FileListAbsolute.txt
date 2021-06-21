@@ -223,3 +223,10 @@ C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\fo
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Login.resources
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Register.resources
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.ClientesCompras.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Login.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.NClienteInscreveEvento.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Register.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Hor.resources
+C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.Horrario.resources
+>>>>>>> dde3b4e2d2cabc1741bf19e3c80fb2f7999860d9
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Horrario.resources

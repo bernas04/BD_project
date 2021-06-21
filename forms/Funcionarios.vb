@@ -12,9 +12,7 @@ Public Class Funcionarios
 
         CMD = New SqlCommand
         CMD.Connection = CN
-        CMD.CommandText = "SELECT  Pessoa_NIF,Nome,Num_funcionario,N_telefone,Email from proj.Pessoa join  
-                            proj.Funcionario on  
-                            Pessoa.NIF=Funcionario.Pessoa_NIF"
+        CMD.CommandText = "SELECT  * from proj.FuncionarioTodos"
         CN.Open()
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
@@ -22,7 +20,11 @@ Public Class Funcionarios
         While RDR.Read
             Dim C As New FuncionarioC
             C.Num_func = RDR.Item("Num_funcionario")
-            C.Pessoa_NIF = RDR.Item("Pessoa_NIF")
+            C.Pessoa_NIF = RDR.Item("NIF")
+            C.Mail = RDR.Item("secçao_codigo")
+            C.Telefone = RDR.Item("Email")
+            C.Nome = RDR.Item("N_telefone")
+            C.Sec = RDR.Item("Nome")
             ListBox1.Items.Add(C)
         End While
         CN.Close()
@@ -30,20 +32,8 @@ Public Class Funcionarios
 
 
     End Sub
-    Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
-        If ListBox1.SelectedIndex > -1 Then
-            currentContact = ListBox1.SelectedIndex
-            Button1.Enabled = True
-            If ListBox1.Items.Count = 0 Or currentContact < 0 Then Exit Sub
-            Dim contact As New FuncionarioC
-            contact = CType(ListBox1.Items.Item(currentContact), FuncionarioC)
-            Label2.Text = contact.Num_func
 
-        End If
-    End Sub
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        PáginaFuncionario.Label1.Text = Label2.Text
-        PáginaFuncionario.Show()
     End Sub
 End Class

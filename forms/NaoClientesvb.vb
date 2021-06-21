@@ -277,4 +277,11 @@ Public Class NaoClientesvb
         ListBox1.SelectedIndex = -1
     End Sub
 
+    Private Sub txtGenero_TextChanged(sender As Object, e As EventArgs) Handles txtGenero.TextChanged
+
+    End Sub
+
+    Private Sub txtTelefone_TextChanged(sender As Object, e As EventArgs) Handles txtTelefone.TextChanged
+
+    End Sub
 End Class

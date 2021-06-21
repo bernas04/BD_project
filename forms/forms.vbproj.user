@@ -43,6 +43,9 @@
     <Compile Update="GestaoPes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Horrario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Login.vb">
       <SubType>Form</SubType>
     </Compile>
