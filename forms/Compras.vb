@@ -15,7 +15,11 @@ Public Class Compras
 
         CMD = New SqlCommand
         CMD.Connection = CN
-        CMD.CommandText = "SELECT * FROM proj.Compra"
+        If (Form1.txt_ret.Text = "client") Then
+            CMD.CommandText = "Select * FROM proj.Compra where cliente_id=" & Form1.txtId.Text
+        Else
+            CMD.CommandText = "SELECT * FROM proj.Compra"
+        End If
         CN.Open()
         LockControls()
         Dim RDR As SqlDataReader
