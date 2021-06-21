@@ -27,6 +27,8 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label_Produtos = New System.Windows.Forms.Label()
         Me.Label_Seccaco = New System.Windows.Forms.Label()
         Me.Label_Fornecedor = New System.Windows.Forms.Label()
@@ -68,6 +70,7 @@ Partial Class Form1
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_Produtos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_Seccao, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox_Fornecedor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -115,6 +118,8 @@ Partial Class Form1
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.PictureBox2)
         Me.GroupBox2.Controls.Add(Me.Label_Produtos)
         Me.GroupBox2.Controls.Add(Me.Label_Seccaco)
         Me.GroupBox2.Controls.Add(Me.Label_Fornecedor)
@@ -136,6 +141,27 @@ Partial Class Form1
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ações"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label3.Location = New System.Drawing.Point(320, 287)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(85, 23)
+        Me.Label3.TabIndex = 15
+        Me.Label3.Text = "Compras"
+        Me.Label3.Visible = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(320, 211)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(76, 73)
+        Me.PictureBox2.TabIndex = 14
+        Me.PictureBox2.TabStop = False
+        Me.PictureBox2.Visible = False
         '
         'Label_Produtos
         '
@@ -524,6 +550,7 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox_Produtos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox_Seccao, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox_Fornecedor, System.ComponentModel.ISupportInitialize).EndInit()
@@ -586,4 +613,6 @@ Partial Class Form1
     Friend WithEvents txtId As Label
     Friend WithEvents pesquisa As TextBox
     Friend WithEvents labelPesquisa As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents PictureBox2 As PictureBox
 End Class

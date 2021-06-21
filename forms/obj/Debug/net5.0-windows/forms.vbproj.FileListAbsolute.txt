@@ -222,3 +222,4 @@ C:\Users\Admin\BD_project\forms\obj\Debug\net5.0-windows\forms.PáginaFuncionari
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.NClienteInscreveEvento.resources
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Login.resources
 C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.Register.resources
+C:\Users\joaob\Ambiente de Trabalho\BD_project\forms\obj\Debug\net5.0-windows\forms.ClientesCompras.resources

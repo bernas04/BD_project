@@ -10,6 +10,9 @@
     <Compile Update="Clientes.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ClientesCompras.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Compras.vb">
       <SubType>Form</SubType>
     </Compile>

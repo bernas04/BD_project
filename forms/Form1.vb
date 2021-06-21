@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Data.OleDb
 Public Class Form1
 
     Dim CMD As SqlCommand
@@ -69,6 +70,13 @@ Public Class Form1
             AllEvents.Button1.Visible = False
             Produto.Addbtn.Visible = False
             Produto.editbtn.Visible = False
+            PictureBox2.Visible = True
+            Label3.Visible = True
+        End If
+
+        If txt_ret.Text = "func" Then
+            Clientes.ButtonCompra.Visible = False
+            Clientes.ButtonInscreve.Visible = False
         End If
 
 
@@ -138,7 +146,23 @@ Public Class Form1
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles pesquisa.TextChanged
+        Dim CMD As SqlCommand
         Dim txt As String = pesquisa.Text
+        Dim CN = New SqlConnection("data source=tcp:mednat.ieeta.pt\SQLSERVER,8101;" &
+                               "Initial Catalog = p5g2; uid = p5g2;" &
+                               "password = P52021bd")
 
+        CMD = New SqlCommand
+        CMD.Connection = CN
+
+        CMD.CommandText = "Select * FROM proj.Pesquisa(" & txtId.Text & ")"
+
+        CN.Open()
+        Dim RDR As SqlDataReader
+        RDR = CMD.ExecuteReader
+    End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        ClientesCompras.Show()
     End Sub
 End Class
