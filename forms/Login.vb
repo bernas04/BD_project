@@ -40,6 +40,13 @@ Public Class Login
             MsgBox("Dados Invalidos")
             txtmail.Text = ""
             txtpass.Text = ""
+        ElseIf (str = "nclient") Then
+            Dim nif As String = CMD.Parameters("@nif").Value
+            Form1.txt_ret.Text = str
+            Form1.txtNif.Text = nif
+            Form1.Show()
+            txtmail.Text = ""
+            txtpass.Text = ""
         Else
             Dim nif As String = CMD.Parameters("@nif").Value
             Dim number As Integer = CMD.Parameters("@numero").Value

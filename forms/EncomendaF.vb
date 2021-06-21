@@ -1,13 +1,12 @@
 ﻿Imports System.Data.SqlClient
-Public Class ClientesCompras
+
+Public Class EncomendaF
     Dim CN As SqlConnection
     Dim CMD As SqlCommand
     Dim currentContact As Integer
-    Dim adding As Boolean
-    Dim preco As Double = 0
-    Dim arrayList As String
-
-    Private Sub ClientesCompras_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Dim currentContact1 As Integer
+    Dim preco As Integer = 0
+    Private Sub EncomendaF_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CN = New SqlConnection("data source=tcp:mednat.ieeta.pt\SQLSERVER,8101;" &
                                "Initial Catalog = p5g2; uid = p5g2;" &
                                "password = P52021bd")
@@ -19,6 +18,7 @@ Public Class ClientesCompras
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
         ListBox1.Items.Clear()
+        Button1.Visible = False
         While RDR.Read
             Dim C As New ProdutosC
             C.Codigo = RDR.Item("codigo")
@@ -32,7 +32,22 @@ Public Class ClientesCompras
         End While
         CN.Close()
         currentContact = 0
+        CMD.CommandText = "SELECT * FROM proj.Fornecedor"
+        CN.Open()
+        RDR = CMD.ExecuteReader
+
+        ListBox2.Items.Clear()
+        While RDR.Read
+            Dim C As New FornecedorC
+            C.Nif = RDR.Item("Nif")
+            C.Name = RDR.Item("Nome")
+            C.Morada = RDR.Item("Morada")
+            ListBox2.Items.Add(C)
+        End While
+        CN.Close()
+        currentContact1 = 0
     End Sub
+
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox1.SelectedIndexChanged
 
@@ -41,52 +56,52 @@ Public Class ClientesCompras
             If ListBox1.Items.Count = 0 Or currentContact < 0 Then Exit Sub
             Dim contact As New ProdutosC
             contact = CType(ListBox1.Items.Item(currentContact), ProdutosC)
-            Dim p As New Double
-            p = Double.Parse(contact.Preco)
             Try
                 Dim input = InputBox("Defina a quantidade que pretende: ")
-                preco += Integer.Parse(input) * p
-                ListBox1.SelectedIndex = -1
-                If Not arrayList = "" Then
-                    arrayList += ","
+                txtQuantidade.Text = input
+                txtidProd.Text = contact.Codigo
+
+                preco += 1
+                If preco = 2 Then
+                    Button1.Visible = True
                 End If
-                arrayList += contact.Codigo + " " + input
-                contact.Stock = input
-                ListBox2.Items.Add(contact)
-                txtTotal.Text = preco
             Catch
                 Close()
             End Try
         End If
+    End Sub
 
+    Private Sub ListBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox2.SelectedIndexChanged
 
-
+        If ListBox1.SelectedIndex > -1 Then
+            currentContact1 = ListBox2.SelectedIndex
+            If ListBox2.Items.Count = 0 Or currentContact1 < 0 Then Exit Sub
+            Dim contact As New FornecedorC
+            contact = CType(ListBox2.Items.Item(currentContact), FornecedorC)
+            txtFornecedor.Text = contact.Nif
+            preco += 1
+            If preco = 2 Then
+                Button1.Visible = True
+            End If
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ListBox2.Items.Clear()
-        arrayList = ""
-        txtTotal.Text = 0
-        preco = 0
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        CN = New SqlConnection("data source=tcp:mednat.ieeta.pt\SQLSERVER,8101;" &
-                               "Initial Catalog = p5g2; uid = p5g2;" &
-                               "password = P52021bd")
-
-
         Dim thisDate As Date
         thisDate = Today
-        CMD = New SqlCommand
-        CMD.Connection = CN
-        CMD.CommandText = "proj.ClienteCompra"
+        MsgBox(Today)
+
+        MsgBox(DateTime.Today.AddDays(7))
+        CMD.CommandText = "proj.FazerEncomenda"
         CMD.CommandType = CommandType.StoredProcedure
         CMD.Parameters.Clear()
-        CMD.Parameters.Add("@preco", SqlDbType.Float).Value = txtTotal.Text
-        CMD.Parameters.Add("@id", SqlDbType.Int).Value = Form1.txtId.Text
-        CMD.Parameters.Add("@lista", SqlDbType.VarChar, 500).Value = arrayList
-        CMD.Parameters.Add("@dia", SqlDbType.Date).Value = thisDate
+        CMD.Parameters.Add("@num", SqlDbType.Int).Value = Form1.txtId.Text
+        CMD.Parameters.Add("@data_p", SqlDbType.Date).Value = thisDate
+        CMD.Parameters.Add("@date_entrega", SqlDbType.Date).Value = DateTime.Today.AddDays(7)
+        CMD.Parameters.Add("@nif", SqlDbType.Char, 9).Value = txtFornecedor.Text
+        CMD.Parameters.Add("@code", SqlDbType.Int).Value = txtidProd.Text
+        CMD.Parameters.Add("@quantidade", SqlDbType.Int).Value = txtQuantidade.Text
+
         CN.Open()
         Try
             CMD.ExecuteNonQuery()
@@ -96,7 +111,7 @@ Public Class ClientesCompras
             CN.Close()
         End Try
         CN.Close()
-        MsgBox("Compra efetuada com sucesso")
+        MsgBox("Encomenda efetuada com sucesso")
         Close()
     End Sub
 End Class

@@ -79,6 +79,23 @@ Public Class Form1
             Clientes.ButtonInscreve.Visible = False
         End If
 
+        If txt_ret.Text = "nclient" Then
+            PictureBox_Pessoal.Visible = False
+            Label_Pessoal.Visible = False
+            PictureBox_Fornecedor.Visible = False
+            Label_Fornecedor.Visible = False
+            PictureBox_Encomendas.Visible = False
+            Label_Encomendas.Visible = False
+            PictureBox_Seccao.Visible = False
+            Label_Seccaco.Visible = False
+            AllEvents.Button1.Visible = False
+            Produto.Addbtn.Visible = False
+            Produto.editbtn.Visible = False
+            PictureBox2.Visible = True
+            Label3.Visible = True
+            PictureBox_Compras.Visible = False
+            Label_Compras.Visible = False
+        End If
 
 
 

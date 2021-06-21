@@ -15,8 +15,6 @@ Public Class NaoClientesvb
         CMD.Connection = CN
         CMD.CommandText = "SELECT * FROM proj.N_ClientesEvento" & "(" & ")"
         CN.Open()
-        Button1.Visible = False
-        Button2.Visible = False
         txtNif.ReadOnly = True
         txtName.ReadOnly = True
         txtEmail.ReadOnly = True
@@ -58,8 +56,6 @@ Public Class NaoClientesvb
     End Sub
     Private Sub bttnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancelbtn.Click
         ListBox1.Enabled = True
-        Button1.Visible = True
-        Button2.Visible = True
         If ListBox1.Items.Count > 0 Then
             currentContact = ListBox1.SelectedIndex
             If currentContact < 0 Then currentContact = 0
@@ -73,8 +69,6 @@ Public Class NaoClientesvb
 
     Private Sub bttnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles okbtn.Click
         Try
-            Button1.Visible = True
-            Button2.Visible = True
             SaveFornecedor()
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -87,9 +81,7 @@ Public Class NaoClientesvb
 
 
 
-    Private Sub bttnAdd_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Addbtn.Click
-        Button1.Visible = False
-        Button2.Visible = False
+    Private Sub bttnAdd_Click(ByVal sender As Object, ByVal e As System.EventArgs)
         adding = True
         ClearFields()
         HideButtons()
@@ -140,8 +132,6 @@ Public Class NaoClientesvb
             MsgBox("Please select a contact to edit")
             Exit Sub
         End If
-        Button1.Visible = False
-        Button2.Visible = False
         adding = False
         HideButtonsEdit()
         ListBox1.Enabled = False
@@ -154,8 +144,6 @@ Public Class NaoClientesvb
             DateTimePicker1.Enabled = True
             ShowFornecedor()
         End If
-        Button1.Visible = True
-        Button2.Visible = True
     End Sub
 
     ' Helper routines
@@ -189,7 +177,6 @@ Public Class NaoClientesvb
 
     Sub ShowButtons()
         LockControls()
-        Addbtn.Visible = True
         editbtn.Visible = True
         okbtn.Visible = False
         cancelbtn.Visible = False
@@ -205,7 +192,6 @@ Public Class NaoClientesvb
     End Sub
     Sub HideButtonsEdit()
         LockControlsEdit()
-        Addbtn.Visible = False
         editbtn.Visible = False
         okbtn.Visible = True
         cancelbtn.Visible = True
@@ -214,7 +200,6 @@ Public Class NaoClientesvb
 
     Sub HideButtons()
         UnlockControls()
-        Addbtn.Visible = False
         editbtn.Visible = False
         okbtn.Visible = True
         cancelbtn.Visible = True
@@ -268,7 +253,7 @@ Public Class NaoClientesvb
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         If currentContact < 0 Then
             MsgBox("Please select a contact!")
             Exit Sub
@@ -277,11 +262,5 @@ Public Class NaoClientesvb
         ListBox1.SelectedIndex = -1
     End Sub
 
-    Private Sub txtGenero_TextChanged(sender As Object, e As EventArgs) Handles txtGenero.TextChanged
 
-    End Sub
-
-    Private Sub txtTelefone_TextChanged(sender As Object, e As EventArgs) Handles txtTelefone.TextChanged
-
-    End Sub
 End Class

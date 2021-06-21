@@ -100,11 +100,18 @@ Public Class Clientes
         LockControls()
         Dim idx As Integer = ListBox1.FindString(txtId.Text)
         ListBox1.SelectedIndex = idx
-        okbtn.Visible = False
-        cancelbtn.Visible = False
-        editbtn.Visible = True
-        ButtonCompra.Visible = True
-        ButtonInscreve.Visible = True
+        If Form1.txt_ret.Text = "client" Then
+            okbtn.Visible = False
+            cancelbtn.Visible = False
+            editbtn.Visible = True
+            ButtonCompra.Visible = True
+            ButtonInscreve.Visible = True
+        Else
+            okbtn.Visible = False
+            cancelbtn.Visible = False
+            editbtn.Visible = True
+        End If
+
     End Sub
 
     Private Function SaveCliente() As Boolean

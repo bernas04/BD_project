@@ -84,6 +84,6 @@ Public Class Horrario
         Label5.Visible = False
         Label6.Visible = False
         TextBox1.Visible = False
-
+        Close()
     End Sub
 End Class

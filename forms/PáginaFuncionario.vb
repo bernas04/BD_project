@@ -103,4 +103,8 @@ Public Class PáginaFuncionario
     Private Sub hor_Click(sender As Object, e As EventArgs) Handles hor.Click
         Horrario.Show()
     End Sub
+
+    Private Sub enco_Click(sender As Object, e As EventArgs) Handles enco.Click
+        EncomendaF.Show()
+    End Sub
 End Class

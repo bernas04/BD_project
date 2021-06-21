@@ -32,6 +32,7 @@ Partial Class AllEvents
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtEventoID = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ListBox1
@@ -131,11 +132,21 @@ Partial Class AllEvents
         Me.txtEventoID.TabIndex = 9
         Me.txtEventoID.Visible = False
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(596, 20)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(129, 34)
+        Me.Button2.TabIndex = 10
+        Me.Button2.Text = "Inscrever"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'AllEvents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txtEventoID)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label7)
@@ -163,4 +174,5 @@ Partial Class AllEvents
     Friend WithEvents Label7 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents txtEventoID As Label
+    Friend WithEvents Button2 As Button
 End Class

@@ -211,7 +211,7 @@ Public Class Fornecedor
         End Try
     End Sub
 
-
+    'updates
     Private Sub RemoveContact(ByVal Nif As String)
         CMD.CommandText = "DELETE proj.Fornecedor WHERE NIF=@Nif "
         CMD.Parameters.Clear()

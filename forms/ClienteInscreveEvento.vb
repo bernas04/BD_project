@@ -16,7 +16,7 @@ Public Class ClienteInscreveEvento
 
         CMD = New SqlCommand
         CMD.Connection = CN
-        CMD.CommandText = "SELECT * FROM proj.clienteEventosNaoInscrito(" & nifCliente.Text & ")"
+        CMD.CommandText = "SELECT * FROM proj.clienteEventosNaoInscrito(" & Form1.txtNif.Text & ")"
         CN.Open()
         Dim RDR As SqlDataReader
         RDR = CMD.ExecuteReader
@@ -52,7 +52,11 @@ Public Class ClienteInscreveEvento
     End Sub
 
     Private Sub ButtonOkInscreve_Click(sender As Object, e As EventArgs) Handles ButtonOkInscreve.Click
-        SubmitContact()
+        If (Form1.txt_ret.Text = "nclient") Then
+            SubmitContactN()
+        Else
+            SubmitContact()
+        End If
         ListBox1.SelectedIndex = -1
         Close()
     End Sub
@@ -61,13 +65,34 @@ Public Class ClienteInscreveEvento
         CMD.CommandText = "proj.ClienteFazerInscricao"
         CMD.CommandType = CommandType.StoredProcedure
         CMD.Parameters.Clear()
-        CMD.Parameters.Add("@nif", SqlDbType.Char, 9).Value = nifCliente.Text
+
+        CMD.Parameters.Add("@nif", SqlDbType.Int).Value = Form1.txtId.Text
         CMD.Parameters.Add("@id", SqlDbType.Int).Value = idEvento.Text
         CMD.Parameters.Add("@vagas", SqlDbType.Int).Value = txtVagas.Text
         CN.Open()
         Try
             CMD.ExecuteNonQuery()
             MsgBox("Cliente Inscrito com sucesso")
+        Catch ex As Exception
+            Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
+        Finally
+            CN.Close()
+        End Try
+        CN.Close()
+    End Sub
+
+    Private Sub SubmitContactN()
+        CMD.CommandText = "proj.NaoClienteFazerInscricao"
+        CMD.CommandType = CommandType.StoredProcedure
+        CMD.Parameters.Clear()
+
+        CMD.Parameters.Add("@nif", SqlDbType.Char, 9).Value = Form1.txtNif.Text
+        CMD.Parameters.Add("@id", SqlDbType.Int).Value = idEvento.Text
+        CMD.Parameters.Add("@vagas", SqlDbType.Int).Value = txtVagas.Text
+        CN.Open()
+        Try
+            CMD.ExecuteNonQuery()
+            MsgBox("Inscrito com sucesso")
         Catch ex As Exception
             Throw New Exception("Failed to update contact in database. " & vbCrLf & "ERROR MESSAGE: " & vbCrLf & ex.Message)
         Finally

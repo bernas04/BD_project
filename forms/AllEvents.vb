@@ -18,7 +18,11 @@ Public Class AllEvents
         CMD.CommandText = "SELECT * FROM proj.Evento"
         CN.Open()
         Dim RDR As SqlDataReader
+        If Form1.txt_ret.Text = "client" Then
+            Button2.Visible = True
+        End If
         RDR = CMD.ExecuteReader
+        Button1.Visible = False
         ListBox1.Items.Clear()
         While RDR.Read
             Dim C As New EventosC
@@ -51,5 +55,9 @@ Public Class AllEvents
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Participants.txtEventoId.Text = txtEventoID.Text
         Participants.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ClienteInscreveEvento.Show()
     End Sub
 End Class
