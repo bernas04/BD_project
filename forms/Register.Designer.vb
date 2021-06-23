@@ -171,7 +171,7 @@ Partial Class Register
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"M", "F"})
+        Me.ComboBox1.Items.AddRange(New Object() {"m", "f"})
         Me.ComboBox1.Location = New System.Drawing.Point(681, 262)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(69, 28)

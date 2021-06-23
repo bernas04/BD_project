@@ -27,7 +27,6 @@ Public Class Encomendas
             C.Id = RDR.Item("id")
             C.DataPedido = RDR.Item("data_pedido")
             C.DataEntrega = RDR.Item("data_entrega")
-            C.Conta = RDR.Item("preco")
             C.CodProd = RDR.Item("produto_codigo")
             C.nFunct = RDR.Item("funcionario_n_func")
             C.niFornecedor = RDR.Item("fornecedor_nif")

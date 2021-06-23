@@ -1,12 +1,40 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data.OleDb
 Public Class Form1
-
+    Dim currentContact As Integer
     Dim CMD As SqlCommand
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim CN = New SqlConnection("data source=tcp:mednat.ieeta.pt\SQLSERVER,8101;" &
+    Dim CN = New SqlConnection("data source=tcp:mednat.ieeta.pt\SQLSERVER,8101;" &
                                "Initial Catalog = p5g2; uid = p5g2;" &
                                "password = P52021bd")
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Dim txt As String = pesquisa.Text
+
+
+        CMD = New SqlCommand
+        CMD.Connection = CN
+        CMD.CommandText = "Select * FROM proj.Pesquisa(" & "'" & txt & "'" & ")"
+
+        CN.Open()
+        Dim RDR1 As SqlDataReader
+        RDR1 = CMD.ExecuteReader
+        ListBox1.Items.Clear()
+        While RDR1.Read
+            Dim C As New Search
+            C.Name = RDR1.Item("nome")
+            C.Codigo = RDR1.Item("codigo")
+            ListBox1.Items.Add(C)
+        End While
+        CN.Close()
+        ListBox1.Visible = True
+        Button1.Visible = True
+    End Sub
+
+
+
+
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
 
         CMD = New SqlCommand
         CMD.Connection = CN
@@ -162,24 +190,27 @@ Public Class Form1
         Seccao.Show()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles pesquisa.TextChanged
-        Dim CMD As SqlCommand
-        Dim txt As String = pesquisa.Text
-        Dim CN = New SqlConnection("data source=tcp:mednat.ieeta.pt\SQLSERVER,8101;" &
-                               "Initial Catalog = p5g2; uid = p5g2;" &
-                               "password = P52021bd")
-
-        CMD = New SqlCommand
-        CMD.Connection = CN
-
-        CMD.CommandText = "Select * FROM proj.Pesquisa(" & txtId.Text & ")"
-
-        CN.Open()
-        Dim RDR As SqlDataReader
-        RDR = CMD.ExecuteReader
-    End Sub
-
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         ClientesCompras.Show()
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        Close()
+        Login.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ProdutoPage.Label9.Text = Label4.Text
+        ProdutoPage.Show()
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+        If ListBox1.SelectedIndex > -1 Then
+            currentContact = ListBox1.SelectedIndex
+            If ListBox1.Items.Count = 0 Or currentContact < 0 Then Exit Sub
+            Dim contact As New Search
+            contact = CType(ListBox1.Items.Item(currentContact), Search)
+            Label4.Text = contact.Codigo
+        End If
     End Sub
 End Class

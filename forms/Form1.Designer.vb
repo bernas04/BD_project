@@ -50,15 +50,10 @@ Partial Class Form1
         Me.forn_txt = New System.Windows.Forms.Label()
         Me.eventos_txt = New System.Windows.Forms.Label()
         Me.func_txt = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
@@ -67,6 +62,12 @@ Partial Class Form1
         Me.txtId = New System.Windows.Forms.Label()
         Me.pesquisa = New System.Windows.Forms.TextBox()
         Me.labelPesquisa = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -85,6 +86,8 @@ Partial Class Form1
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -137,7 +140,7 @@ Partial Class Form1
         Me.GroupBox2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox2.Location = New System.Drawing.Point(48, 266)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1423, 347)
+        Me.GroupBox2.Size = New System.Drawing.Size(1197, 347)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Ações"
@@ -148,15 +151,15 @@ Partial Class Form1
         Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label3.Location = New System.Drawing.Point(320, 287)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(85, 23)
+        Me.Label3.Size = New System.Drawing.Size(150, 23)
         Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Compras"
+        Me.Label3.Text = "Efetuar compras"
         Me.Label3.Visible = False
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(320, 211)
+        Me.PictureBox2.Location = New System.Drawing.Point(350, 215)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(76, 73)
         Me.PictureBox2.TabIndex = 14
@@ -206,11 +209,11 @@ Partial Class Form1
         '
         Me.Label_Compras.AutoSize = True
         Me.Label_Compras.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label_Compras.Location = New System.Drawing.Point(800, 131)
+        Me.Label_Compras.Location = New System.Drawing.Point(756, 129)
         Me.Label_Compras.Name = "Label_Compras"
-        Me.Label_Compras.Size = New System.Drawing.Size(85, 23)
+        Me.Label_Compras.Size = New System.Drawing.Size(174, 23)
         Me.Label_Compras.TabIndex = 9
-        Me.Label_Compras.Text = "Compras"
+        Me.Label_Compras.Text = "Registo de compras"
         '
         'Label_Eventos
         '
@@ -310,20 +313,15 @@ Partial Class Form1
         Me.GroupBox3.Controls.Add(Me.forn_txt)
         Me.GroupBox3.Controls.Add(Me.eventos_txt)
         Me.GroupBox3.Controls.Add(Me.func_txt)
-        Me.GroupBox3.Controls.Add(Me.Label14)
         Me.GroupBox3.Controls.Add(Me.PictureBox14)
-        Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.Controls.Add(Me.PictureBox12)
-        Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Controls.Add(Me.PictureBox11)
-        Me.GroupBox3.Controls.Add(Me.Label10)
         Me.GroupBox3.Controls.Add(Me.PictureBox10)
-        Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Controls.Add(Me.PictureBox9)
         Me.GroupBox3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.GroupBox3.Location = New System.Drawing.Point(47, 619)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(1424, 312)
+        Me.GroupBox3.Size = New System.Drawing.Size(1198, 312)
         Me.GroupBox3.TabIndex = 2
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Estatísticas"
@@ -339,52 +337,48 @@ Partial Class Form1
         'seccao_txt
         '
         Me.seccao_txt.AutoSize = True
-        Me.seccao_txt.Location = New System.Drawing.Point(893, 221)
+        Me.seccao_txt.Location = New System.Drawing.Point(781, 277)
         Me.seccao_txt.Name = "seccao_txt"
-        Me.seccao_txt.Size = New System.Drawing.Size(0, 23)
+        Me.seccao_txt.Size = New System.Drawing.Size(20, 23)
         Me.seccao_txt.TabIndex = 25
+        Me.seccao_txt.Text = "p"
         '
         'clientes_txt
         '
         Me.clientes_txt.AutoSize = True
-        Me.clientes_txt.Location = New System.Drawing.Point(369, 220)
+        Me.clientes_txt.Location = New System.Drawing.Point(254, 277)
         Me.clientes_txt.Name = "clientes_txt"
-        Me.clientes_txt.Size = New System.Drawing.Size(0, 23)
+        Me.clientes_txt.Size = New System.Drawing.Size(20, 23)
         Me.clientes_txt.TabIndex = 24
+        Me.clientes_txt.Text = "p"
         '
         'forn_txt
         '
         Me.forn_txt.AutoSize = True
-        Me.forn_txt.Location = New System.Drawing.Point(1114, 79)
+        Me.forn_txt.Location = New System.Drawing.Point(911, 127)
         Me.forn_txt.Name = "forn_txt"
-        Me.forn_txt.Size = New System.Drawing.Size(0, 23)
+        Me.forn_txt.Size = New System.Drawing.Size(20, 23)
         Me.forn_txt.TabIndex = 23
+        Me.forn_txt.Text = "p"
         Me.forn_txt.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'eventos_txt
         '
         Me.eventos_txt.AutoSize = True
-        Me.eventos_txt.Location = New System.Drawing.Point(640, 79)
+        Me.eventos_txt.Location = New System.Drawing.Point(518, 127)
         Me.eventos_txt.Name = "eventos_txt"
-        Me.eventos_txt.Size = New System.Drawing.Size(0, 23)
+        Me.eventos_txt.Size = New System.Drawing.Size(20, 23)
         Me.eventos_txt.TabIndex = 22
+        Me.eventos_txt.Text = "p"
         '
         'func_txt
         '
         Me.func_txt.AutoSize = True
-        Me.func_txt.Location = New System.Drawing.Point(191, 79)
+        Me.func_txt.Location = New System.Drawing.Point(43, 127)
         Me.func_txt.Name = "func_txt"
-        Me.func_txt.Size = New System.Drawing.Size(0, 23)
+        Me.func_txt.Size = New System.Drawing.Size(20, 23)
         Me.func_txt.TabIndex = 21
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(271, 276)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(79, 23)
-        Me.Label14.TabIndex = 20
-        Me.Label14.Text = "Clientes"
+        Me.func_txt.Text = "p"
         '
         'PictureBox14
         '
@@ -395,15 +389,6 @@ Partial Class Form1
         Me.PictureBox14.TabIndex = 19
         Me.PictureBox14.TabStop = False
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(53, 127)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(116, 23)
-        Me.Label12.TabIndex = 18
-        Me.Label12.Text = "Funcionários"
-        '
         'PictureBox12
         '
         Me.PictureBox12.Image = CType(resources.GetObject("PictureBox12.Image"), System.Drawing.Image)
@@ -412,15 +397,6 @@ Partial Class Form1
         Me.PictureBox12.Size = New System.Drawing.Size(69, 73)
         Me.PictureBox12.TabIndex = 17
         Me.PictureBox12.TabStop = False
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(977, 131)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(106, 23)
-        Me.Label11.TabIndex = 16
-        Me.Label11.Text = "Fornecedor"
         '
         'PictureBox11
         '
@@ -431,15 +407,6 @@ Partial Class Form1
         Me.PictureBox11.TabIndex = 15
         Me.PictureBox11.TabStop = False
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(803, 277)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(69, 23)
-        Me.Label10.TabIndex = 14
-        Me.Label10.Text = "Secção"
-        '
         'PictureBox10
         '
         Me.PictureBox10.Image = CType(resources.GetObject("PictureBox10.Image"), System.Drawing.Image)
@@ -448,15 +415,6 @@ Partial Class Form1
         Me.PictureBox10.Size = New System.Drawing.Size(96, 92)
         Me.PictureBox10.TabIndex = 13
         Me.PictureBox10.TabStop = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(542, 127)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(78, 23)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Eventos"
         '
         'PictureBox9
         '
@@ -514,7 +472,7 @@ Partial Class Form1
         '
         'pesquisa
         '
-        Me.pesquisa.Location = New System.Drawing.Point(1227, 209)
+        Me.pesquisa.Location = New System.Drawing.Point(1359, 209)
         Me.pesquisa.Name = "pesquisa"
         Me.pesquisa.PlaceholderText = "Search"
         Me.pesquisa.Size = New System.Drawing.Size(244, 27)
@@ -524,17 +482,80 @@ Partial Class Form1
         '
         Me.labelPesquisa.AutoSize = True
         Me.labelPesquisa.Font = New System.Drawing.Font("Segoe UI Historic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.labelPesquisa.Location = New System.Drawing.Point(1122, 209)
+        Me.labelPesquisa.Location = New System.Drawing.Point(1259, 208)
         Me.labelPesquisa.Name = "labelPesquisa"
         Me.labelPesquisa.Size = New System.Drawing.Size(94, 25)
         Me.labelPesquisa.TabIndex = 7
         Me.labelPesquisa.Text = "Pesquisa:"
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(72, 193)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(36, 41)
+        Me.PictureBox3.TabIndex = 8
+        Me.PictureBox3.TabStop = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(63, 237)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(58, 20)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "LogOut"
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(1614, 209)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(36, 37)
+        Me.PictureBox4.TabIndex = 10
+        Me.PictureBox4.TabStop = False
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.ItemHeight = 20
+        Me.ListBox1.Location = New System.Drawing.Point(1259, 299)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(391, 124)
+        Me.ListBox1.TabIndex = 11
+        Me.ListBox1.Visible = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(1286, 448)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(317, 29)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Página do produto"
+        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(1404, 256)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 20)
+        Me.Label4.TabIndex = 13
+        Me.Label4.Text = "Label4"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1497, 979)
+        Me.ClientSize = New System.Drawing.Size(1729, 979)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.labelPesquisa)
         Me.Controls.Add(Me.pesquisa)
         Me.Controls.Add(Me.txtId)
@@ -566,6 +587,8 @@ Partial Class Form1
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -588,17 +611,12 @@ Partial Class Form1
     Friend WithEvents PictureBox_Eventos As PictureBox
     Friend WithEvents PictureBox_Pessoal As PictureBox
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents Label_Produtos As Label
     Friend WithEvents Label_Seccaco As Label
-    Friend WithEvents Label14 As Label
     Friend WithEvents PictureBox14 As PictureBox
-    Friend WithEvents Label12 As Label
     Friend WithEvents PictureBox12 As PictureBox
-    Friend WithEvents Label11 As Label
     Friend WithEvents PictureBox11 As PictureBox
-    Friend WithEvents Label10 As Label
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Label13 As Label
     Friend WithEvents PictureBox13 As PictureBox
@@ -615,4 +633,10 @@ Partial Class Form1
     Friend WithEvents labelPesquisa As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label4 As Label
 End Class
