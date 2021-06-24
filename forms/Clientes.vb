@@ -72,7 +72,7 @@ Public Class Clientes
         txtNtelefone.ReadOnly = True
     End Sub
 
-    Private Sub cancelbtn_Click(sender As Object, e As EventArgs) Handles cancelbtn.Click
+    Private Sub cancelbtn_Click(sender As Object, e As EventArgs)
         ListBox1.Enabled = True
         If ListBox1.Items.Count > 0 Then
             currentContact = ListBox1.SelectedIndex
@@ -80,9 +80,6 @@ Public Class Clientes
             ShowClientes()
         End If
         LockControls()
-        okbtn.Visible = False
-        cancelbtn.Visible = False
-        editbtn.Visible = True
         ButtonCompra.Visible = True
         ButtonInscreve.Visible = True
     End Sub
@@ -101,15 +98,8 @@ Public Class Clientes
         Dim idx As Integer = ListBox1.FindString(txtId.Text)
         ListBox1.SelectedIndex = idx
         If Form1.txt_ret.Text = "client" Then
-            okbtn.Visible = False
-            cancelbtn.Visible = False
-            editbtn.Visible = True
             ButtonCompra.Visible = True
             ButtonInscreve.Visible = True
-        Else
-            okbtn.Visible = False
-            cancelbtn.Visible = False
-            editbtn.Visible = True
         End If
 
     End Sub
@@ -139,7 +129,7 @@ Public Class Clientes
         Return True
     End Function
 
-    Private Sub editbtn_Click(sender As Object, e As EventArgs) Handles editbtn.Click
+    Private Sub editbtn_Click(sender As Object, e As EventArgs)
         currentContact = ListBox1.SelectedIndex
         If currentContact < 0 Then
             MsgBox("Please select a contact to edit")
@@ -176,9 +166,6 @@ Public Class Clientes
 
     Sub HideButtons()
         UnlockControls()
-        editbtn.Visible = False
-        okbtn.Visible = True
-        cancelbtn.Visible = True
     End Sub
 
     Sub UnlockControls()

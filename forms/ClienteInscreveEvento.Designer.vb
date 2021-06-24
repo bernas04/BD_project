@@ -69,6 +69,7 @@ Partial Class ClienteInscreveEvento
         Me.nifCliente.Name = "nifCliente"
         Me.nifCliente.Size = New System.Drawing.Size(0, 20)
         Me.nifCliente.TabIndex = 4
+        Me.nifCliente.Visible = False
         '
         'idEvento
         '
@@ -77,6 +78,7 @@ Partial Class ClienteInscreveEvento
         Me.idEvento.Name = "idEvento"
         Me.idEvento.Size = New System.Drawing.Size(0, 20)
         Me.idEvento.TabIndex = 5
+        Me.idEvento.Visible = False
         '
         'Label2
         '
@@ -126,6 +128,7 @@ Partial Class ClienteInscreveEvento
         Me.txtVagas.Size = New System.Drawing.Size(53, 20)
         Me.txtVagas.TabIndex = 10
         Me.txtVagas.Text = "Label6"
+        Me.txtVagas.Visible = False
         '
         'ClienteInscreveEvento
         '

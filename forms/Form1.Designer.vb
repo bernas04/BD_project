@@ -484,9 +484,9 @@ Partial Class Form1
         Me.labelPesquisa.Font = New System.Drawing.Font("Segoe UI Historic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.labelPesquisa.Location = New System.Drawing.Point(1259, 208)
         Me.labelPesquisa.Name = "labelPesquisa"
-        Me.labelPesquisa.Size = New System.Drawing.Size(94, 25)
+        Me.labelPesquisa.Size = New System.Drawing.Size(98, 25)
         Me.labelPesquisa.TabIndex = 7
-        Me.labelPesquisa.Text = "Pesquisa:"
+        Me.labelPesquisa.Text = "Produtos:"
         '
         'PictureBox3
         '
@@ -544,6 +544,7 @@ Partial Class Form1
         Me.Label4.Size = New System.Drawing.Size(53, 20)
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Label4"
+        Me.Label4.Visible = False
         '
         'Form1
         '

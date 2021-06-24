@@ -26,7 +26,6 @@ Public Class Form1
         End While
         CN.Close()
         ListBox1.Visible = True
-        Button1.Visible = True
     End Sub
 
 
@@ -34,7 +33,7 @@ Public Class Form1
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Button1.Visible = False
 
         CMD = New SqlCommand
         CMD.Connection = CN
@@ -100,6 +99,8 @@ Public Class Form1
             Produto.editbtn.Visible = False
             PictureBox2.Visible = True
             Label3.Visible = True
+            ProdutoPage.Button1.Visible = False
+            ProdutoPage.Button2.Visible = False
         End If
 
         If txt_ret.Text = "func" Then
@@ -123,6 +124,11 @@ Public Class Form1
             Label3.Visible = True
             PictureBox_Compras.Visible = False
             Label_Compras.Visible = False
+            PictureBox2.Visible = False
+            Label3.Visible = False
+            AllEvents.Button1.Visible = False
+            ProdutoPage.Button1.Visible = False
+            ProdutoPage.Button2.Visible = False
         End If
 
 
@@ -211,6 +217,9 @@ Public Class Form1
             Dim contact As New Search
             contact = CType(ListBox1.Items.Item(currentContact), Search)
             Label4.Text = contact.Codigo
+            Button1.Visible = True
         End If
     End Sub
+
+
 End Class

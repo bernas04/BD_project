@@ -73,11 +73,11 @@ Public Class EncomendaF
 
     Private Sub ListBox2_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBox2.SelectedIndexChanged
 
-        If ListBox1.SelectedIndex > -1 Then
+        If ListBox2.SelectedIndex > -1 Then
             currentContact1 = ListBox2.SelectedIndex
             If ListBox2.Items.Count = 0 Or currentContact1 < 0 Then Exit Sub
             Dim contact As New FornecedorC
-            contact = CType(ListBox2.Items.Item(currentContact), FornecedorC)
+            contact = CType(ListBox2.Items.Item(currentContact1), FornecedorC)
             txtFornecedor.Text = contact.Nif
             preco += 1
             If preco = 2 Then
@@ -89,9 +89,7 @@ Public Class EncomendaF
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim thisDate As Date
         thisDate = Today
-        MsgBox(Today)
 
-        MsgBox(DateTime.Today.AddDays(7))
         CMD.CommandText = "proj.FazerEncomenda"
         CMD.CommandType = CommandType.StoredProcedure
         CMD.Parameters.Clear()

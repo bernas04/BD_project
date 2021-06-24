@@ -40,9 +40,6 @@ Partial Class PáginaFuncionario
         Me.txtSec = New System.Windows.Forms.TextBox()
         Me.txtNif = New System.Windows.Forms.TextBox()
         Me.txtTele = New System.Windows.Forms.TextBox()
-        Me.edit = New System.Windows.Forms.Button()
-        Me.ok = New System.Windows.Forms.Button()
-        Me.cancel = New System.Windows.Forms.Button()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
@@ -203,38 +200,6 @@ Partial Class PáginaFuncionario
         Me.txtTele.Size = New System.Drawing.Size(114, 27)
         Me.txtTele.TabIndex = 18
         '
-        'edit
-        '
-        Me.edit.Location = New System.Drawing.Point(104, 487)
-        Me.edit.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.edit.Name = "edit"
-        Me.edit.Size = New System.Drawing.Size(86, 31)
-        Me.edit.TabIndex = 19
-        Me.edit.Text = "Edit"
-        Me.edit.UseVisualStyleBackColor = True
-        '
-        'ok
-        '
-        Me.ok.Location = New System.Drawing.Point(179, 487)
-        Me.ok.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.ok.Name = "ok"
-        Me.ok.Size = New System.Drawing.Size(86, 31)
-        Me.ok.TabIndex = 20
-        Me.ok.Text = "Ok"
-        Me.ok.UseVisualStyleBackColor = True
-        Me.ok.Visible = False
-        '
-        'cancel
-        '
-        Me.cancel.Location = New System.Drawing.Point(35, 487)
-        Me.cancel.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.cancel.Name = "cancel"
-        Me.cancel.Size = New System.Drawing.Size(86, 31)
-        Me.cancel.TabIndex = 21
-        Me.cancel.Text = "Cancel"
-        Me.cancel.UseVisualStyleBackColor = True
-        Me.cancel.Visible = False
-        '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(553, 135)
@@ -249,9 +214,6 @@ Partial Class PáginaFuncionario
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(914, 600)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.cancel)
-        Me.Controls.Add(Me.ok)
-        Me.Controls.Add(Me.edit)
         Me.Controls.Add(Me.txtTele)
         Me.Controls.Add(Me.txtNif)
         Me.Controls.Add(Me.txtSec)
@@ -296,8 +258,5 @@ Partial Class PáginaFuncionario
     Friend WithEvents txtSec As TextBox
     Friend WithEvents txtNif As TextBox
     Friend WithEvents txtTele As TextBox
-    Friend WithEvents edit As Button
-    Friend WithEvents ok As Button
-    Friend WithEvents cancel As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

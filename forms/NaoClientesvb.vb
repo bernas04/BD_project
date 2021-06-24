@@ -54,7 +54,7 @@ Public Class NaoClientesvb
         DateTimePicker1.Text = contact.Data
         NClienteInscreveEvento.txtNifnCliente.Text = txtNif.Text
     End Sub
-    Private Sub bttnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cancelbtn.Click
+    Private Sub bttnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ListBox1.Enabled = True
         If ListBox1.Items.Count > 0 Then
             currentContact = ListBox1.SelectedIndex
@@ -67,7 +67,7 @@ Public Class NaoClientesvb
         ShowButtons()
     End Sub
 
-    Private Sub bttnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles okbtn.Click
+    Private Sub bttnOK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Try
             SaveFornecedor()
         Catch ex As Exception
@@ -77,6 +77,9 @@ Public Class NaoClientesvb
         Dim idx As Integer = ListBox1.FindString(txtNif.Text)
         ListBox1.SelectedIndex = idx
         ShowButtons()
+        Dim velhice = New NaoClientesvb
+        Close()
+        velhice.Show()
     End Sub
 
 
@@ -96,12 +99,6 @@ Public Class NaoClientesvb
         End If
     End Sub
 
-    Private Sub Form1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles MyBase.KeyPress
-        ' If we're not in EDIT mode, reject keystrokes
-        If Not okbtn.Visible Then
-            e.Handled = True
-        End If
-    End Sub
 
     Private Function SaveFornecedor() As Boolean
         Dim contact As New NaoClientesC
@@ -126,7 +123,7 @@ Public Class NaoClientesvb
         Return True
     End Function
 
-    Private Sub bttnEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles editbtn.Click
+    Private Sub bttnEdit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         currentContact = ListBox1.SelectedIndex
         If currentContact < 0 Then
             MsgBox("Please select a contact to edit")
@@ -177,9 +174,6 @@ Public Class NaoClientesvb
 
     Sub ShowButtons()
         LockControls()
-        editbtn.Visible = True
-        okbtn.Visible = False
-        cancelbtn.Visible = False
     End Sub
 
     Sub ClearFields()
@@ -192,17 +186,11 @@ Public Class NaoClientesvb
     End Sub
     Sub HideButtonsEdit()
         LockControlsEdit()
-        editbtn.Visible = False
-        okbtn.Visible = True
-        cancelbtn.Visible = True
     End Sub
 
 
     Sub HideButtons()
         UnlockControls()
-        editbtn.Visible = False
-        okbtn.Visible = True
-        cancelbtn.Visible = True
     End Sub
 
     Private Sub SubmitContact(ByVal C As NaoClientesC)

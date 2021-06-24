@@ -34,9 +34,6 @@ Partial Class NaoClientesvb
         Me.Label10 = New System.Windows.Forms.Label()
         Me.txtGenero = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.cancelbtn = New System.Windows.Forms.Button()
-        Me.editbtn = New System.Windows.Forms.Button()
-        Me.okbtn = New System.Windows.Forms.Button()
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.txtNif = New System.Windows.Forms.TextBox()
         Me.txtName = New System.Windows.Forms.TextBox()
@@ -112,9 +109,6 @@ Partial Class NaoClientesvb
         Me.Funcionalidades.Controls.Add(Me.Label10)
         Me.Funcionalidades.Controls.Add(Me.txtGenero)
         Me.Funcionalidades.Controls.Add(Me.Label9)
-        Me.Funcionalidades.Controls.Add(Me.cancelbtn)
-        Me.Funcionalidades.Controls.Add(Me.editbtn)
-        Me.Funcionalidades.Controls.Add(Me.okbtn)
         Me.Funcionalidades.Controls.Add(Me.txtEmail)
         Me.Funcionalidades.Controls.Add(Me.txtNif)
         Me.Funcionalidades.Controls.Add(Me.txtName)
@@ -180,38 +174,6 @@ Partial Class NaoClientesvb
         Me.Label9.Size = New System.Drawing.Size(57, 20)
         Me.Label9.TabIndex = 15
         Me.Label9.Text = "Género"
-        '
-        'cancelbtn
-        '
-        Me.cancelbtn.Location = New System.Drawing.Point(79, 444)
-        Me.cancelbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.cancelbtn.Name = "cancelbtn"
-        Me.cancelbtn.Size = New System.Drawing.Size(86, 31)
-        Me.cancelbtn.TabIndex = 13
-        Me.cancelbtn.Text = "Cancel"
-        Me.cancelbtn.UseVisualStyleBackColor = True
-        Me.cancelbtn.Visible = False
-        '
-        'editbtn
-        '
-        Me.editbtn.Location = New System.Drawing.Point(149, 444)
-        Me.editbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.editbtn.Name = "editbtn"
-        Me.editbtn.Size = New System.Drawing.Size(86, 31)
-        Me.editbtn.TabIndex = 12
-        Me.editbtn.Text = "Edit"
-        Me.editbtn.UseVisualStyleBackColor = True
-        '
-        'okbtn
-        '
-        Me.okbtn.Location = New System.Drawing.Point(218, 444)
-        Me.okbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.okbtn.Name = "okbtn"
-        Me.okbtn.Size = New System.Drawing.Size(86, 31)
-        Me.okbtn.TabIndex = 8
-        Me.okbtn.Text = "Ok"
-        Me.okbtn.UseVisualStyleBackColor = True
-        Me.okbtn.Visible = False
         '
         'txtEmail
         '
@@ -322,9 +284,6 @@ Partial Class NaoClientesvb
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Funcionalidades As GroupBox
-    Friend WithEvents cancelbtn As Button
-    Friend WithEvents editbtn As Button
-    Friend WithEvents okbtn As Button
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents txtNif As TextBox
     Friend WithEvents txtName As TextBox

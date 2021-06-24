@@ -16,6 +16,7 @@ Public Class Eventos
         CMD = New SqlCommand
         txtCodSec.Text = Label10.Text
         CMD.Connection = CN
+
         CMD.CommandText = "SELECT * FROM proj.Evento where secçao_codigo = " & Label10.Text
         CN.Open()
         txtCodSec.ReadOnly = True
@@ -106,6 +107,7 @@ Public Class Eventos
         ListBox1.Enabled = True
         Dim idx As Integer = ListBox1.FindString(Label10.Text)
         ListBox1.SelectedIndex = idx
+        Close()
         ShowButtons()
     End Sub
 

@@ -20,6 +20,7 @@ Public Class Compras
         Else
             CMD.CommandText = "SELECT * FROM proj.Compra"
         End If
+        DetalhesComprasButton.Visible = False
         CN.Open()
         LockControls()
         Dim RDR As SqlDataReader
@@ -57,6 +58,7 @@ Public Class Compras
             currentContact = ListBox1.SelectedIndex
             ShowCompras()
         End If
+        DetalhesComprasButton.Visible = True
     End Sub
 
     Private Sub Form1_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown

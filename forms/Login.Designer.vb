@@ -60,17 +60,15 @@ Partial Class Login
         Me.txtmail.PlaceholderText = "exemple@exemple.com"
         Me.txtmail.Size = New System.Drawing.Size(201, 27)
         Me.txtmail.TabIndex = 2
-        Me.txtmail.Text = "dictum@Integer.edu"
         '
         'txtpass
         '
-        Me.txtpass.Location = New System.Drawing.Point(234, 131)
+        Me.txtpass.Location = New System.Drawing.Point(234, 134)
         Me.txtpass.Name = "txtpass"
         Me.txtpass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtpass.PlaceholderText = "Palavra-Passe"
         Me.txtpass.Size = New System.Drawing.Size(201, 27)
         Me.txtpass.TabIndex = 3
-        Me.txtpass.Text = "func3"
         '
         'Label1
         '

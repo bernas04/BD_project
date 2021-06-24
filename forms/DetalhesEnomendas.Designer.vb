@@ -27,7 +27,6 @@ Partial Class DetalhesEnomendas
         Me.idEncomenda = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -83,16 +82,6 @@ Partial Class DetalhesEnomendas
         Me.Label2.Size = New System.Drawing.Size(72, 22)
         Me.Label2.TabIndex = 24
         Me.Label2.Text = "Produto"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(267, 118)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 22)
-        Me.Label3.TabIndex = 25
-        Me.Label3.Text = "Secção"
         '
         'Label4
         '
@@ -154,7 +143,6 @@ Partial Class DetalhesEnomendas
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.idEncomenda)
@@ -172,7 +160,6 @@ Partial Class DetalhesEnomendas
     Friend WithEvents idEncomenda As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label

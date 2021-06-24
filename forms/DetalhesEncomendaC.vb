@@ -11,7 +11,7 @@
 
 
     Overrides Function ToString() As String
-        Return _idEncomenda & "                 " & _nomeProduto & "                     " & _nomeSecçao & "                   " & _nomeFuncionario & "                  " & _nifFuncionario & "              " & _nomeFornecedor & "             " & _nifFornecedor & "         " & _moradaFornecedor
+        Return _idEncomenda & "                 " & _nomeProduto & "                    " & _nomeFuncionario & "                  " & _nifFuncionario & "              " & _nomeFornecedor & "             " & _nifFornecedor & "         " & _moradaFornecedor
     End Function
     Property IdEncomenda() As String
         Get

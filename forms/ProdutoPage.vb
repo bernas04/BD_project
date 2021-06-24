@@ -125,6 +125,9 @@ Public Class ProdutoPage
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+        Close()
+        Produto.Close()
+        Produto.Show()
     End Sub
     Private Function SaveFornecedor() As Boolean
         Dim contact As New ProdutosC
@@ -209,5 +212,8 @@ Public Class ProdutoPage
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         criarProduto()
+        Close()
+        Produto.Close()
+        Produto.Show()
     End Sub
 End Class

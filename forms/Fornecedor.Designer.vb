@@ -86,7 +86,7 @@ Partial Class Fornecedor
         '
         'editbtn
         '
-        Me.editbtn.Location = New System.Drawing.Point(201, 404)
+        Me.editbtn.Location = New System.Drawing.Point(215, 404)
         Me.editbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.editbtn.Name = "editbtn"
         Me.editbtn.Size = New System.Drawing.Size(86, 31)

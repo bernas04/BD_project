@@ -17,11 +17,11 @@ Public Class Register
                                "Initial Catalog = p5g2; uid = p5g2;" &
                                "password = P52021bd")
 
-        If (TextBox2.Text <> TextBox3.Text) Then
-            MsgBox("Error: Palavras passes não coincidem")
+        If (TextBox2.Text <> TextBox3.Text Or TextBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "" Or
+        TextBox4.Text = "" Or TextBox5.Text = "" Or TextBox6.Text = "" Or ComboBox1.Text = "") Then
+            MsgBox("Error: Dados inválidos!")
             TextBox2.Text = ""
             TextBox3.Text = ""
-
         Else
             CMD = New SqlCommand
             CMD.Connection = CN

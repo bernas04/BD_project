@@ -20,9 +20,15 @@ Public Class AllEvents
         Dim RDR As SqlDataReader
         If Form1.txt_ret.Text = "client" Then
             Button2.Visible = True
+            Button1.Visible = False
+        ElseIf Form1.txt_ret.Text = "nclient" Then
+            Button2.Visible = True
+            Button1.Visible = False
+        Else
+            Button2.Visible = False
+            Button1.Visible = True
         End If
         RDR = CMD.ExecuteReader
-        Button1.Visible = False
         ListBox1.Items.Clear()
         While RDR.Read
             Dim C As New EventosC

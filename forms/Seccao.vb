@@ -80,6 +80,10 @@ Public Class Seccao
         Dim idx As Integer = ListBox1.FindString(txtCodigo.Text)
         ListBox1.SelectedIndex = idx
         ShowButtons()
+
+        Dim velhice = New Seccao
+        Close()
+        velhice.Show()
     End Sub
 
     Private Sub bttnAdd_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles addbtn2.Click

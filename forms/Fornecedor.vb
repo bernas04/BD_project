@@ -68,6 +68,9 @@ Public Class Fornecedor
         Dim idx As Integer = ListBox1.FindString(txtNif.Text)
         ListBox1.SelectedIndex = idx
         ShowButtons()
+        Dim velhice = New Fornecedor
+        Close()
+        velhice.Show()
     End Sub
 
     Private Sub bttnAdd_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Addbtn.Click

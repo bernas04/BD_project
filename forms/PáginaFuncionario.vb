@@ -44,34 +44,25 @@ Public Class PáginaFuncionario
         txtSec.ReadOnly = True
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles edit.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         txtEmail.ReadOnly = False
         txtTele.ReadOnly = False
         hor.Visible = False
         enco.Visible = False
-        edit.Visible = False
-        ok.Visible = True
-        cancel.Visible = True
     End Sub
 
-    Private Sub cancel_Click(sender As Object, e As EventArgs) Handles cancel.Click
+    Private Sub cancel_Click(sender As Object, e As EventArgs)
         txtEmail.ReadOnly = True
         txtTele.ReadOnly = True
         hor.Visible = True
         enco.Visible = True
-        edit.Visible = True
-        ok.Visible = False
-        cancel.Visible = False
     End Sub
 
-    Private Sub ok_Click(sender As Object, e As EventArgs) Handles ok.Click
+    Private Sub ok_Click(sender As Object, e As EventArgs)
         txtEmail.ReadOnly = True
         txtTele.ReadOnly = True
         hor.Visible = True
         enco.Visible = True
-        edit.Visible = True
-        ok.Visible = False
-        cancel.Visible = False
         Submit()
     End Sub
 

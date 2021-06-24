@@ -38,6 +38,7 @@ Partial Class EncomendaF
         Me.txtFornecedor.Size = New System.Drawing.Size(53, 20)
         Me.txtFornecedor.TabIndex = 1
         Me.txtFornecedor.Text = "Label1"
+        Me.txtFornecedor.Visible = False
         '
         'txtidProd
         '
@@ -47,6 +48,7 @@ Partial Class EncomendaF
         Me.txtidProd.Size = New System.Drawing.Size(53, 20)
         Me.txtidProd.TabIndex = 2
         Me.txtidProd.Text = "Label1"
+        Me.txtidProd.Visible = False
         '
         'ListBox1
         '
@@ -74,6 +76,7 @@ Partial Class EncomendaF
         Me.txtQuantidade.Size = New System.Drawing.Size(53, 20)
         Me.txtQuantidade.TabIndex = 5
         Me.txtQuantidade.Text = "Label1"
+        Me.txtQuantidade.Visible = False
         '
         'Button1
         '
